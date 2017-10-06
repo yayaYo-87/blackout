@@ -4,11 +4,13 @@
 
     ></header-block>
     <router-view></router-view>
+    <footer-block></footer-block>
   </div>
 </template>
 
 <script>
   import headerBlock from '../components/Header.vue'
+  import footerBlock from '../components/Footer.vue'
 
   export default {
     name: 'app',
@@ -19,6 +21,7 @@
     },
     components: {
       headerBlock,
+      footerBlock
     },
     watch: {
       '$route' : 'mainFalse'

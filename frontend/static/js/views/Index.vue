@@ -3,6 +3,7 @@
         <main-header></main-header>
         <main-project></main-project>
         <main-slider></main-slider>
+        <main-client></main-client>
     </div>
 </template>
 
@@ -10,6 +11,7 @@
   import mainHeader from '../components/MainHeaer.vue'
   import mainProject from '../components/MainProject.vue'
   import mainSlider from '../components/MainSlaider.vue'
+  import mainClient from '../components/MainClient.vue'
 
   export default {
     data() {
@@ -20,7 +22,8 @@
     components:{
       mainHeader,
       mainProject,
-      mainSlider
+      mainSlider,
+      mainClient
     }
   }
 </script>
