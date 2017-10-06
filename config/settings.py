@@ -43,9 +43,9 @@ INSTALLED_APPS = [
     'nested_admin',
     'tinymce',
 
-    # 'apps.devices',
-    # 'apps.projects',
-    # 'apps.services',
+    'app.devices',
+    'app.projects',
+    'app.services',
 ]
 
 MIDDLEWARE = [
