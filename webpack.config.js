@@ -94,7 +94,7 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
     contentBase: __dirname + '/frontend/templates',
-    host: '0.0.0.0',
+    host: 'localhost',
     port: 3000,
     inline: true,
     hot: true,

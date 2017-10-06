@@ -1,0 +1,49 @@
+.main__slider{
+  height: 700px
+  max-height: 700px
+  max-width: 1259px
+  margin: 0 auto
+  width: 100%
+  margin-top: 40px
+  position: relative
+  &-prev{
+    position: absolute
+    background url("/static/img/arow.svg") no-repeat
+    background-size 100%
+    width: 23px
+    height: 40px
+    bottom: 254px
+    left: 28px
+    z-index: 2
+    cursor: pointer
+  }
+  &-next{
+    position: absolute
+    background url("/static/img/arow.svg") no-repeat
+    background-size 100%
+    width: 23px
+    height: 40px
+    bottom: 254px
+    transform rotate(180deg)
+    right: 28px
+    z-index: 2
+    cursor: pointer
+  }
+}
+.slider{
+  max-height: 700px
+  width: 100%
+  height: 100%
+  overflow: hidden
+  &__img{
+    width: 100%
+    height: 100%
+  }
+}
+
+@media(max-width: 1400px) {
+  .main__slider{
+    margin-left: 70px
+    margin-right: 70px
+  }
+}

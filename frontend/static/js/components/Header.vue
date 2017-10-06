@@ -1,7 +1,11 @@
 <template>
     <div class="header">
         <div class="header__wrapper">
-            <div class="header__logo"></div>
+            <div class="header__logo">
+                <div class="header__logo_img">
+
+                </div>
+            </div>
             <div class="header__items">
                 <div class="header__item">
                     Услуги
@@ -22,9 +26,9 @@
                     Контакты
                 </div>
             </div>
-            <div class="header__tel">
+            <a href="tel:+375 (25) 632 28 29" class="header__tel">
                 +375 (25) 632 28 29
-            </div>
+            </a>
         </div>
     </div>
 </template>
