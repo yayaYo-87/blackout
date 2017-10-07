@@ -16,8 +16,8 @@ class ServiceSerializer(serializers.ModelSerializer):
 
 
 class ServiceDetailSerializer(serializers.ModelSerializer):
-    description = ServiceDescriptionSerializer(many=True)
+    service_desces = ServiceDescriptionSerializer(many=True)
 
     class Meta:
         model = Service
-        fields = ['id', 'name', 'cover', 'description']
+        fields = ['id', 'name', 'cover', 'service_desces']
