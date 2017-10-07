@@ -1,5 +1,5 @@
 <template>
-    <div class="footer" :class="{'footer-white' : $route.name === 'services'}">
+    <div class="footer" :class="footerWhite">
         <div class="footer__wrapper">
             <div class="footer__logo">
                 <img src="/static/img/logover.svg" alt="logo">
@@ -30,6 +30,11 @@
     data() {
       return {
 
+      }
+    },
+    computed: {
+      footerWhite(){
+        return  this.$route.name === 'services' ? 'footer-white' : '' || this.$route.name === 'servicesItem' ? 'footer-white' : ''
       }
     }
   }
