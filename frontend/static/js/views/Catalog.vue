@@ -14,8 +14,7 @@
                     является создание дизайна площадок, технические расчеты и сопровождающие проекты.</div>
             </div>
             <div class="catalog__item" >
-                <!--:to="{ name: 'catalogItem', params: { id: item.id } }"-->
-                <div >
+                <router-link :to="{ name: 'catalogCategory' }" >
                     <div class="catalog__item-img" style="background-image: url('/static/img/catalog1.jpg');"></div>
                     <div class="catalog__item_text">
                         <div class="catalog__item_text-title">LED Экраны</div>
@@ -43,7 +42,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </router-link>
             </div>
         </div>
     </div>

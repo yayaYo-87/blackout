@@ -10,6 +10,7 @@ import index from './views/Index.vue'
 import services from './views/Services.vue'
 import servicesItem from './views/ServicesItem.vue'
 import catalog from './views/Catalog.vue'
+import catalogCategory from './views/CatalogCategory.vue'
 
 //Плагины
 import VueAwesomeSwiper from 'vue-awesome-swiper'
@@ -23,9 +24,7 @@ Vue.use(VueAwesomeSwiper)
 
 //При переходе скролит до верха
 const scrollBehavior = (to, from, savedPosition) => {
-  if (to.name === 'item') {
     return { x: 0, y: 0 }
-  }
 };
 
 const router = new VueRouter({
@@ -36,6 +35,7 @@ const router = new VueRouter({
     { path: '/services', name: 'services' , component: services},
     { path: '/services/:id', name: 'servicesItem' , component: servicesItem},
     { path: '/catalog', name: 'catalog' , component: catalog},
+    { path: '/catalog/catalogCategory', name: 'catalogCategory' , component: catalogCategory},
   ]
 });
 
@@ -47,6 +47,7 @@ new Vue({
     services,
     servicesItem,
     catalog,
+    catalogCategory,
     swiper,
     swiperSlide
 

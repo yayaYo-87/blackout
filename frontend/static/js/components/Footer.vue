@@ -36,7 +36,8 @@
       footerWhite(){
         return  this.$route.name === 'services' ? 'footer-white' : '' ||
         this.$route.name === 'servicesItem' ? 'footer-white' : '' ||
-        this.$route.name === 'catalog' ? 'footer-white' : ''
+        this.$route.name === 'catalog' ? 'footer-white' : '' ||
+        this.$route.name === 'catalogCategory' ? 'footer-white' : ''
       }
     }
   }
