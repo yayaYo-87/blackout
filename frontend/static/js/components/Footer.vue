@@ -34,7 +34,9 @@
     },
     computed: {
       footerWhite(){
-        return  this.$route.name === 'services' ? 'footer-white' : '' || this.$route.name === 'servicesItem' ? 'footer-white' : ''
+        return  this.$route.name === 'services' ? 'footer-white' : '' ||
+        this.$route.name === 'servicesItem' ? 'footer-white' : '' ||
+        this.$route.name === 'catalog' ? 'footer-white' : ''
       }
     }
   }

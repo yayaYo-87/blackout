@@ -9,6 +9,7 @@ import store from './store'
 import index from './views/Index.vue'
 import services from './views/Services.vue'
 import servicesItem from './views/ServicesItem.vue'
+import catalog from './views/Catalog.vue'
 
 //Плагины
 import VueAwesomeSwiper from 'vue-awesome-swiper'
@@ -34,6 +35,7 @@ const router = new VueRouter({
     { path: '/', name: 'index' , component: index},
     { path: '/services', name: 'services' , component: services},
     { path: '/services/:id', name: 'servicesItem' , component: servicesItem},
+    { path: '/catalog', name: 'catalog' , component: catalog},
   ]
 });
 
@@ -44,6 +46,7 @@ new Vue({
     index,
     services,
     servicesItem,
+    catalog,
     swiper,
     swiperSlide
 

@@ -1,18 +1,30 @@
-.services{
+.catalog{
   max-width: 1440px
   margin: 0 auto
   margin-top: 70px
   &__wrapper{
 
   }
-  &__title{
+  &__header{
     padding: 80px 0px
-    background-color: #333333;
-    font-family: RobotoLight
-    font-size: 40px;
-    color white
-    text-transform uppercase
     padding-left: 90px
+    padding-right: 90px
+    background-color: #333333;
+    display: flex
+    &_title{
+      font-family: RobotoLight
+      font-size: 40px;
+      color white
+      text-transform uppercase
+      flex 1 0 50%
+      width: 50%
+    }
+    &_desc{
+      flex 1 0 50%
+      font-size 14px
+      color white
+      width: 50%
+    }
   }
   &__item{
     position: relative
@@ -24,12 +36,12 @@
     border-top: 1px solid white
     &:hover{
       height: 490px
-      .services__item_text{
-        max-height: 200px
-        bottom: 60px
+      .catalog__item_text{
+        max-height: 400px
         padding: 28px 90px 40px 90px
+        bottom: 60px
       }
-      .services__item_text-desc{
+      .catalog__item_text-desc{
         transform scaleY(1)
       }
     }
@@ -59,7 +71,7 @@
         font-size: 30px;
         font-family RobotoBold
         line-height: 50px
-        width: 50%
+        width: 45%
         flex 1 0 50%
         transition .5s
         text-transform uppercase
@@ -67,9 +79,24 @@
       &-desc{
         transform scaleY(0)
         transition .5s
-        font-size 14px
-        line-height: 30px
+        flex 1 0 60%
         padding-top: 12px
+        display: flex
+        flex-wrap wrap
+        &_item{
+          font-size: 14px;
+          text-transform uppercase
+          margin-bottom: 20px
+          margin-right: 20px
+          width:  42%
+          transition .5s
+          span{
+            border-bottom: 1px solid rgba(255, 255, 255, 0.54)
+            &:hover{
+              border-bottom: 1px solid rgba(255, 255, 255, 1)
+            }
+          }
+        }
       }
     }
   }

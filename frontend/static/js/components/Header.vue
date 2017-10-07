@@ -10,9 +10,9 @@
                 <router-link :to="{ name: 'services' }" class="header__item">
                     Услуги
                 </router-link>
-                <div class="header__item">
+                <router-link :to="{ name: 'catalog' }" class="header__item">
                     Оборудование
-                </div>
+                </router-link>
                 <div class="header__item">
                     Проекты
                 </div>
