@@ -142,10 +142,35 @@
         width: 40px
         height: 40px
         top: -10px
+        background-color rgba(0, 0, 0, 0)
         left: 0px
-        background url("/static/img/plusLink.svg") no-repeat
-        background-size 100%
-
+        border: 1px solid black
+        transition .5s
+        z-index:1
+      }
+      &:before{
+        transition .5s
+        content '+'
+        z-index: 2
+        position: absolute
+        cursor: pointer
+        color black
+        top: -10px
+        left: 1px
+        width: 42px
+        height: 42px
+        text-align center
+        font-size 30px
+        font-family: RobotoLight;
+        line-height: 40px;
+      }
+      &:hover{
+        &:after{
+          background-color rgba(0, 0, 0, 1)
+        }
+        &:before{
+          color: white
+        }
       }
     }
   }

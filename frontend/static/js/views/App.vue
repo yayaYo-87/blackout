@@ -1,9 +1,9 @@
 <template>
   <div id="app" class="app"  >
-    <header-block
+    <header-block></header-block>
 
-    ></header-block>
     <router-view></router-view>
+
     <footer-block></footer-block>
   </div>
 </template>
@@ -24,7 +24,7 @@
       footerBlock
     },
     watch: {
-      '$route' : 'mainFalse'
+
     },
     computed: {
 

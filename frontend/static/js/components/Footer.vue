@@ -1,5 +1,5 @@
 <template>
-    <div class="footer">
+    <div class="footer" :class="{'footer-white' : $route.name === 'services'}">
         <div class="footer__wrapper">
             <div class="footer__logo">
                 <img src="/static/img/logover.svg" alt="logo">

@@ -2,14 +2,14 @@
     <div class="header">
         <div class="header__wrapper">
             <div class="header__logo">
-                <div class="header__logo_img">
-
-                </div>
+                <router-link :to="{ name: 'index' }" class="header__logo_img">
+                    <img src="/static/img/header/logogor.svg" alt="logo">
+                </router-link>
             </div>
             <div class="header__items">
-                <div class="header__item">
+                <router-link :to="{ name: 'services' }" class="header__item">
                     Услуги
-                </div>
+                </router-link>
                 <div class="header__item">
                     Оборудование
                 </div>
