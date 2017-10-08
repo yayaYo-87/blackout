@@ -37,14 +37,14 @@
             <div class="category__items">
                 <div class="category__items_name">Ламповые головы</div>
                 <div class="category__items_wrapper">
-                    <div class="category__item">
+                    <router-link :to="{ name: 'catalogItem' }" class="category__item">
                         <div class="category__item-tag">NEW</div>
                         <div class="category__item_cover" style="background-image: url('/static/img/category.jpg')"></div>
                         <div class="category__item_text">
                             <div class="category__item_text-desc">Clay Paky</div>
                             <div class="category__item_text-name">Scenius UN1CO</div>
                         </div>
-                    </div>
+                    </router-link>
                     <div class="category__item">
                         <div class="category__item-tag">NEW</div>
                         <div class="category__item_cover" style="background-image: url('/static/img/category.jpg')"></div>

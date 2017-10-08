@@ -11,6 +11,8 @@ import services from './views/Services.vue'
 import servicesItem from './views/ServicesItem.vue'
 import catalog from './views/Catalog.vue'
 import catalogCategory from './views/CatalogCategory.vue'
+import catalogItem from './views/CatalogItem.vue'
+import project from './views/Project.vue'
 
 //Плагины
 import VueAwesomeSwiper from 'vue-awesome-swiper'
@@ -35,7 +37,9 @@ const router = new VueRouter({
     { path: '/services', name: 'services' , component: services},
     { path: '/services/:id', name: 'servicesItem' , component: servicesItem},
     { path: '/catalog', name: 'catalog' , component: catalog},
-    { path: '/catalog/catalogCategory', name: 'catalogCategory' , component: catalogCategory},
+    { path: '/catalog/сategory', name: 'catalogCategory' , component: catalogCategory},
+    { path: '/catalog/сategory/catalogItem', name: 'catalogItem' , component: catalogItem},
+    { path: '/project', name: 'project' , component: project},
   ]
 });
 
@@ -48,8 +52,10 @@ new Vue({
     servicesItem,
     catalog,
     catalogCategory,
+    project,
     swiper,
-    swiperSlide
+    swiperSlide,
+    catalogItem
 
   },
   router: router,

@@ -13,9 +13,9 @@
                 <router-link :to="{ name: 'catalog' }" class="header__item">
                     Оборудование
                 </router-link>
-                <div class="header__item">
+                <router-link :to="{ name: 'project' }" class="header__item">
                     Проекты
-                </div>
+                </router-link>
                 <div class="header__item">
                     Партнеры
                 </div>
