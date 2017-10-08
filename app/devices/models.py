@@ -1,6 +1,7 @@
 from django.db import models
 
 from app.services.models import upload_to
+from tinymce.models import HTMLField
 
 
 class Producer(models.Model):
@@ -20,6 +21,7 @@ class Category(models.Model):
     name = models.CharField(verbose_name='Название категории', max_length=256)
     cover = models.ImageField(verbose_name='Выбрать фотографию обложки', blank=True, upload_to=upload_to)
     sort_index = models.PositiveIntegerField(verbose_name='Индекс сортировки', default=0)
+    short_desc = models.CharField(verbose_name='Короткое описание для главной', max_length=256, null=True)
 
     def __str__(self):
         return self.name
@@ -55,6 +57,9 @@ class Devices(models.Model):
     sub_category = models.ForeignKey('SubCategory', verbose_name='Подкатегория оборудования', related_name='device_subcategories')
     producer = models.ForeignKey('Producer', verbose_name='Производитель', related_name='device_producers')
     producer_link = models.URLField(verbose_name='Ссылка на описание производителя', null=True)
+
+    projects = models.ManyToManyField('projects.Project', verbose_name='Использован на мероприятиях:', blank=True)
+    description = HTMLField(verbose_name='Описание проекта', blank=False)
 
     def __str__(self):
         return self.name
