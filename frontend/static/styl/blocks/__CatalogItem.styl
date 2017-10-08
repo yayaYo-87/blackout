@@ -1,0 +1,145 @@
+.item{
+  max-width: 1440px
+  margin: 0 auto
+  margin-top: 70px
+  margin-bottom: 80px
+  &__header {
+    padding: 80px 90px 80px 90px
+    background-color: #333333;
+    &_title{
+      font-size: 20px
+      color: rgba(255,255,255,0.5);
+      text-transform uppercase
+      display: inline-block
+      line-height: 50px
+      padding-right: 20px
+      cursor: pointer
+      font-family RobotoBold
+    }
+    &_name{
+      font-family RobotoBold
+      font-size: 20px
+      color: white;
+      cursor: pointer
+      text-transform uppercase
+      display: inline-block
+      line-height: 50px
+    }
+    &_product{
+      font-size: 40px;
+      font-family RobotoLight
+      color white
+      display: table
+      position: relative
+      &:after{
+        position: absolute
+        content 'new'
+        text-transform uppercase
+        font-size: 14px;
+        padding: 17px 9px 17px 30px
+        background-color  #d0011b;
+        font-family RobotoBold
+        top: 0px
+        right: -90px
+
+      }
+    }
+  }
+  &__content{
+    margin-left: 90px
+    margin-right: 90px
+    margin-top: 40px
+    display: flex
+    &_left{
+      flex 1 0 50%
+      width: 50%
+      padding-right: 40px
+    }
+    &_right{
+      flex 1 0 50%
+      width: 50%
+    }
+    &_img{
+      width: 100%
+      padding-bottom: 40px
+    }
+    &_video{
+      display: flex
+      align-items center
+      margin-bottom: 40px
+      &-text{
+        font-size: 20px;
+        color black
+        text-transform uppercase
+        padding-right: 20px
+        font-family RobotoBold
+      }
+      &-img{
+        width: 110px
+      }
+    }
+    &_project{
+      &-title{
+        font-size: 20px;
+        text-transform uppercase
+        color: #000
+        font-family RobotoBold
+        margin-bottom: 20px
+      }
+      &-items{
+        display: flex
+        flex-direction column
+        align-items left
+      }
+      &-item{
+        font-size: 14px;
+        border-bottom: 1px solid rgba(0,0,0, 0.6)
+        transition .5s
+        cursor: pointer
+        margin-bottom: 5px
+        &:hover{
+          border-bottom: 1px solid rgba(0,0,0, 1)
+        }
+      }
+    }
+    &_desc{
+      font-size 14px
+      line-height: 22px
+      margin-bottom: 20px
+    }
+    &_link{
+      font-size: 14px;
+      border-bottom: 1px solid rgba(0,0,0, 0.6)
+      transition .5s
+      cursor: pointer
+      display: inline-block
+      margin-bottom: 40px
+      &:hover{
+        border-bottom: 1px solid rgba(0,0,0, 1)
+      }
+    }
+    &_producer{
+      &_title{
+        font-size: 20px;
+        text-transform uppercase
+        color black
+        font-family RobotoBold
+        margin-bottom: 10px
+      }
+      &_item{
+        display: flex
+        &-img{
+          width: 140px
+          margin-right: 20px
+        }
+        &-text{
+          font-size: 14px;
+          font-family RobotoRegular
+          span{
+            display: block
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 <template>
-    <div class="footer">
+    <div class="footer" :class="footerWhite">
         <div class="footer__wrapper">
             <div class="footer__logo">
                 <img src="/static/img/logover.svg" alt="logo">
@@ -30,6 +30,16 @@
     data() {
       return {
 
+      }
+    },
+    computed: {
+      footerWhite(){
+        return  this.$route.name === 'services' ? 'footer-white' : '' ||
+        this.$route.name === 'servicesItem' ? 'footer-white' : '' ||
+        this.$route.name === 'catalog' ? 'footer-white' : '' ||
+        this.$route.name === 'catalogCategory' ? 'footer-white' : '' ||
+        this.$route.name === 'catalogItem' ? 'footer-white' : '' ||
+        this.$route.name === 'project' ? 'footer-white' : ''
       }
     }
   }

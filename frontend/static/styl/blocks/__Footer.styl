@@ -19,6 +19,7 @@
   }
   &__cop{
     text-align right
+    padding-right: 40px
     &_item{
       padding-bottom: 20px
       padding-left: 40px
@@ -68,5 +69,47 @@
         }
       }
     }
+  }
+}
+
+.footer-white{
+  background-color white
+  .footer__cop_item {
+    color black
+    font-family RobotoRegular
+    a{
+      color black
+    }
+    &-phone{
+      &:after{
+        background url("/static/img/icon/phone1.svg") no-repeat
+      }
+    }
+    &-mail{
+      &:after{
+        background url("/static/img/icon/mail.svg") no-repeat
+      }
+    }
+    &-fc{
+      &:after{
+        background url("/static/img/icon/fc.svg") no-repeat
+      }
+    }
+    &-sk{
+      &:after{
+        background url("/static/img/icon/sk.svg") no-repeat
+      }
+    }
+    &-map{
+      &:after{
+        background url("/static/img/icon/map.svg") no-repeat
+      }
+    }
+  }
+}
+@media (max-width: 1400px) {
+  .footer {
+    padding-left: 70px;
+    padding-right: 70px;
   }
 }

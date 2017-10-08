@@ -6,6 +6,11 @@
 @import "blocks/__MainSlider.styl"
 @import "blocks/__MainClient.styl"
 @import "blocks/__Footer.styl"
+@import "blocks/__Services.styl"
+@import "blocks/__ServicesItem.styl"
+@import "blocks/__Catalog.styl"
+@import "blocks/__CatalogCategory.styl"
+@import "blocks/__CatalogItem.styl"
 
 body, html {
   margin:0
@@ -81,3 +86,13 @@ body {
   }
 }
 
+.router-enter-active {
+  transition: all .5s ease;
+}
+.router-leave-active {
+  transition: all .5s ease;
+}
+.router-enter, .router-leave-to{
+  opacity: 0;
+  transform scale(.9)
+}
