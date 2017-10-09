@@ -1,3 +1,88 @@
-.about{
+.about {
+  max-width: 1440px
+  margin: 0 auto
+  margin-top: 70px
+  &__wrapper {
 
+  }
+  &__header {
+    padding: 80px 90px 0px 90px
+    background-color: #333333;
+    &_title {
+      color: white
+      text-transform uppercase
+      font-size 40px
+      font-family RobotoLight
+      line-height: 50px
+    }
+    &_img{
+      margin-top: 40px
+      max-width: 800px
+    }
+  }
+  &__text{
+    padding: 40px 90px 0px 90px
+    background-color: #333333;
+    &_title{
+      font-family RobotoBold
+      color: white
+      text-transform uppercase
+      font-size 30px
+      line-height: 50px
+    }
+    &_desc{
+      max-width: 630px
+      color: white
+      line-height: 26px
+      font-size 14px
+    }
+  }
+  &__item{
+    background-color: #333333
+    padding: 20px 90px 0px 90px
+    display: flex
+    flex-wrap wrap
+    &:last-child{
+      padding-bottom: 80px
+      margin-bottom: 50px
+    }
+    &_title{
+      color: white
+      padding-bottom: 10px
+      font-family: RobotoBold
+      font-size 20px
+      width: 100%
+      flex: 1 0 100%
+      text-transform uppercase
+    }
+    &_image{
+      flex 1 0 25%
+      width: 25%
+      max-width: 315px
+      position: relative
+      &-img{
+        background-repeat no-repeat
+        background-size cover
+        width: 315px
+        height: 315px
+      }
+      &-text{
+        position: absolute
+        bottom: 0px
+        left: 0px
+        padding: 20px
+        background-color rgba(0, 0, 0, 0.5)
+        width: 100%
+        &-title{
+          font-size: 14px;
+          color: white
+          padding-bottom: 8px
+        }
+        &-name{
+          font-size: 20px;
+          color: white
+        }
+      }
+    }
+  }
 }
