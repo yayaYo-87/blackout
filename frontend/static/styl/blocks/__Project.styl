@@ -1,0 +1,254 @@
+.project {
+  max-width: 1440px
+  margin: 0 auto
+  margin-top: 70px
+  margin-bottom: 80px
+  &__header {
+    padding: 80px 90px 80px 90px
+    background-color: #333333;
+    &_title{
+      font-size: 40px;
+      height: 50px
+      color white
+      font-family RobotoLight
+    }
+  }
+  &__recent {
+    margin-left: 90px
+    margin-right: 90px
+    margin-bottom: 80px
+    &_title{
+      margin: 40px 0px
+      color black
+      text-transform uppercase
+      font-size 20px
+      font-family RobotoBold
+    }
+    &_items{
+      display: flex
+
+    }
+    &_item {
+      width: 50%
+      flex 1 0 50%
+      height: 315px
+      overflow: hidden
+      position: relative
+      transition .5s
+      max-width: 50%
+      &:after {
+        content ''
+        width: 40px
+        position: absolute
+        background-color rgba(255, 255, 255, 0)
+        height: 40px
+        border: 1px solid white
+        bottom: 40px
+        left: 315px
+        z-index: 5
+        transition .5s
+      }
+      &:before {
+        transition .5s
+        position: absolute
+        left: 317px
+        bottom: 41px
+        z-index: 6
+        width: 40px
+        height: 40px
+        text-align center
+        font-family: RobotoLight
+        line-height: 40px
+        content: '+'
+        font-size 30px
+        color: #ffffff
+      }
+      &:hover {
+        .project__recent_item-wrapper {
+          opacity: 1
+        }
+        &:after {
+          background-color rgba(255, 255, 255, 1)
+        }
+        &:before {
+          color: #000
+        }
+      }
+
+      &-wrapper {
+        position: relative
+        padding-top: 40px
+        z-index: 2
+        cursor: pointer
+        height: 100%
+        display: flex
+        flex-wrap wrap
+        color: white
+        background-color rgba(0, 0, 0, 0.6)
+        opacity: 0
+        transition .5s
+        &-date {
+          font-size 14px
+          color: rgba(255, 255, 255, 0.5)
+          margin-bottom: 20px
+          font-family: RobotoLight
+        }
+        &-flex {
+          flex: 1 0 50%
+          width: 50%
+          height: 100%
+        }
+        &_link {
+          font-size 14px
+          font-family: RobotoRegular
+          padding-left: 50px
+          position: absolute
+          bottom: 40px
+          left 50%
+          line-height: 40px
+        }
+        &-desc {
+          font-size 14px
+          font-family: RobotoRegular
+        }
+        &_title {
+          flex: 1 0 50%
+          font-size: 24px;
+          font-family: RobotoLight
+          text-transform uppercase
+          padding-right: 20px
+          width: 50%
+          height: 100%
+        }
+      }
+      &-img {
+        position: absolute
+        top: 0px
+        left 0px
+        width: 100%
+        height: 100%
+        background-size cover
+        background-position center center
+      }
+      &-title {
+        margin-top: 40px
+        font-size: 40px;
+        font-family RobotoLight
+        text-transform uppercase
+      }
+      &-link {
+        font-size: 14px;
+        font-family RobotoMedium
+        padding-left: 50px
+        position: relative
+        cursor: pointer
+        margin-top: 46px
+        &:after {
+          content: ''
+          cursor: pointer
+          position: absolute
+          width: 40px
+          height: 40px
+          top: -10px
+          background-color rgba(0, 0, 0, 0)
+          left: 0px
+          border: 1px solid black
+          transition .5s
+          z-index: 1
+        }
+        &:before {
+          transition .5s
+          content '+'
+          z-index: 2
+          position: absolute
+          cursor: pointer
+          color black
+          top: -10px
+          left: 1px
+          width: 42px
+          height: 42px
+          text-align center
+          font-size 30px
+          font-family: RobotoLight;
+          line-height: 40px;
+        }
+        &:hover {
+          &:after {
+            background-color rgba(0, 0, 0, 1)
+          }
+          &:before {
+            color: white
+          }
+        }
+      }
+    }
+  }
+  &__title{
+    margin-bottom 40px
+
+    font-family: RobotoBold
+    font-size: 20px;
+    color white
+    text-transform uppercase
+    padding-left: 90px
+  }
+  &__item{
+    position: relative
+    width: 100%
+    height:  300px
+    transition .5s
+    cursor: pointer
+    overflow: hidden
+    border-top: 1px solid white
+    &:hover{
+      height: 490px
+      .project__item_text{
+        max-height: 200px
+        bottom: 60px
+        padding: 28px 90px 40px 90px
+      }
+      .project__item_text-desc{
+        transform scaleY(1)
+      }
+    }
+    &-img{
+      position: absolute
+      top: 0px
+      left 0px
+      background-size cover
+      background-position center center
+      width: 100%
+      height: 100%
+      background-repeat no-repeat
+      transition .5s
+    }
+    &_text{
+      position: absolute
+      bottom: 40px
+      transition .5s
+      left: 0px
+      width: 100%
+      color white
+      padding: 20px 90px 20px 90px
+      background-color rgba(0, 0, 0, 0.8)
+      display: flex
+      max-height: 90px
+      &-title{
+        font-size: 30px;
+        font-family RobotoBold
+        line-height: 50px
+        width: 50%
+        flex 1 0 50%
+        transition .5s
+        text-transform uppercase
+      }
+      &-desc{
+        transform scaleY(0)
+        transition .5s
+        font-size 14px
+        line-height: 30px
+        padding-top: 12px
+      }
+    }
+  }
+}

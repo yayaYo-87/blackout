@@ -34,12 +34,7 @@
     },
     computed: {
       footerWhite(){
-        return  this.$route.name === 'services' ? 'footer-white' : '' ||
-        this.$route.name === 'servicesItem' ? 'footer-white' : '' ||
-        this.$route.name === 'catalog' ? 'footer-white' : '' ||
-        this.$route.name === 'catalogCategory' ? 'footer-white' : '' ||
-        this.$route.name === 'catalogItem' ? 'footer-white' : '' ||
-        this.$route.name === 'project' ? 'footer-white' : ''
+        return  this.$route.name === 'index' ? '' : 'footer-white'
       }
     }
   }

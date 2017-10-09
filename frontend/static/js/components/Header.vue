@@ -16,15 +16,15 @@
                 <router-link :to="{ name: 'project' }" class="header__item">
                     Проекты
                 </router-link>
-                <div class="header__item">
+                <router-link :to="{ name: 'partners' }" class="header__item">
                     Партнеры
-                </div>
-                <div class="header__item">
+                </router-link>
+                <router-link :to="{ name: 'about' }" class="header__item">
                     О компании
-                </div>
-                <div class="header__item">
+                </router-link>
+                <router-link :to="{ name: 'contacts' }" class="header__item">
                     Контакты
-                </div>
+                </router-link>
             </div>
             <a href="tel:+375 (25) 632 28 29" class="header__tel">
                 +375 (25) 632 28 29
