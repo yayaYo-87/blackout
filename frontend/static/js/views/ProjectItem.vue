@@ -57,9 +57,7 @@
           pagination: '.swiper-pagination',
           grabCursor: true,
           slidesPerView: 'auto',
-          effect: 'coverflow',
           autoplay: 5000,
-          centeredSlides: true,
           speed: 1000,
           coverflow: {
             rotate: 50,

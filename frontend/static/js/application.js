@@ -4,6 +4,7 @@ import App from './views/App.vue'
 import '../styl/global.styl'
 import VueRouter from 'vue-router';
 import VueYouTubeEmbed from 'vue-youtube-embed'
+import '../styl/scrollbar.css'
 //Страницы
 import index from './views/Index.vue'
 import services from './views/Services.vue'
