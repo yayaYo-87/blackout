@@ -22,7 +22,7 @@ class Project(models.Model):
     name = models.CharField(verbose_name='Название пректа', max_length=256)
     cover = models.ImageField(verbose_name='Выбрать фотографию обложки', blank=True, upload_to=upload_to)
     date = models.DateField(verbose_name='Дата', auto_now=False, auto_now_add=False)
-    youtube_link = models.URLField(verbose_name='Ссылка на видео', null=True)
+    youtube_link = models.CharField(verbose_name='Ссылка на видео', null=True, max_length=256)
     short_desc = models.TextField(verbose_name='Короткое описание', null=True)
     description = models.TextField(verbose_name='Описание')
     sort_index = models.PositiveIntegerField(verbose_name='Индекс сортировки', default=0)

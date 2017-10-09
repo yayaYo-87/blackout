@@ -12,6 +12,3 @@ class ServiceViewSet(viewsets.ModelViewSet):
         if self.action == 'retrieve':
             return ServiceDetailSerializer
         return super(ServiceViewSet, self).get_serializer_class()
-
-    # def get_queryset(self):
-    #     return Service.objects.filter(active=True)
