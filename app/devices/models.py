@@ -60,6 +60,7 @@ class Devices(models.Model):
 
     projects = models.ManyToManyField('projects.Project', verbose_name='Использован на мероприятиях:', blank=True)
     description = HTMLField(verbose_name='Описание проекта', blank=False)
+    you_tube_link = models.URLField(verbose_name='Ссылка на демо видео', null=True)
 
     def __str__(self):
         return self.name
