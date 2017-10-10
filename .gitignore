@@ -25,5 +25,5 @@ local_settings.py
 .cache/
 htmls/
 pictures/
-frontend/static/dist
+static_root
 __pycache__/
