@@ -95,9 +95,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'blackout',
-        'PASSWORD': 'user1111',
+        'PASSWORD': '1111',
         'HOST': 'localhost',
-        'USER': 'super',
+        'USER': 'postgres',
     }
 }
 
