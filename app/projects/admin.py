@@ -69,4 +69,4 @@ class ProjectAdmin(admin.ModelAdmin):
     image_img.short_description = 'Фотография обложки'
     image_img.allow_tags = True
     inlines = [ProjectImageInline, ProjectDeviceInline]
-    suit_form_tabs = (('general', 'Основные'), ('extra', 'Фото и оборудование'), )
+    suit_form_tabs = (('general', 'Основные'), ('extra', 'Фото и оборудование'))

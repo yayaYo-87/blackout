@@ -80,4 +80,4 @@ class DevicesAdmin(admin.ModelAdmin):
 
     image_img.short_description = 'Фотография обложки'
     image_img.allow_tags = True
-    suit_form_tabs = (('general', 'Основные'), ('extra', 'Дополнительно'), )
+    suit_form_tabs = (('general', 'Основные'), ('extra', 'Дополнительно'))
