@@ -58,7 +58,7 @@
       return {
         swiperOptionTop: {
           notNextTick: true,
-          autoplay: 5000,
+          autoplay: 4000,
           speed: 1000
         },
         swiperOptionThumbs: {

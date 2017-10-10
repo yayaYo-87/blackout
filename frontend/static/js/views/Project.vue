@@ -54,11 +54,33 @@
 </template>
 
 <script>
+  import axios from 'axios'
+
   export default {
     data() {
       return {
-
+        result: []
       }
+    },
+    methods: {
+      get() {
+        let self = this;
+        const id = this.$route.params.item
+
+        axios.get('/api/device/' + id + '/')
+          .then(
+            function (response) {
+              self.result = response.data
+            },
+            function (error) {
+              console.log(error)
+            }
+          )
+      }
+    },
+    created() {
+//      this.get()
     }
+
   }
 </script>
