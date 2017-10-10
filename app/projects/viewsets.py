@@ -1,7 +1,6 @@
 from rest_framework import viewsets
 
-from app.devices.serializers import ProjectCategorySerializer, ProjectCategoryDetailSrializer, ProjectSerializer, \
-    ProjectDetailSerializer
+from app.devices.serializers import ProjectCategorySerializer
 from app.projects.models import ProjectCategory, Project
 
 

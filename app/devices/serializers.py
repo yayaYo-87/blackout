@@ -3,6 +3,7 @@ from rest_framework import serializers
 from app.projects.models import ProjectCategory, Project, ProjectImage
 from app.devices.models import Producer, Category, SubCategory, Devices
 from app.projects.models import ProjectDevice
+from app.projects.serializers import ProjectCategorySerializer
 
 
 class ProducerSerializer(serializers.ModelSerializer):
@@ -69,10 +70,7 @@ class DevicesDetailSerializer(serializers.ModelSerializer):
         ]
 
 
-class ProjectCategorySerializer(serializers.Serializer):
-    class Meta:
-        model = ProjectCategory
-        fields = ['id', 'name', 'cover', 'short_desc']
+
 
 
 class ProjectImageSerializer(serializers.Serializer):
