@@ -3,7 +3,7 @@
         <div class="main__project_items">
             <div class="main__project_item">
                 <div class="main__project_item-title">Наши проекты</div>
-                <div class="main__project_item-link">Показать все проекты</div>
+                <router-link tag="div" :to="{ name: 'project' }" class="main__project_item-link">Показать все проекты</router-link>
             </div>
             <div class="main__project_item main__project_item-hover">
                 <div class="main__project_item-img" style="background-image: url('/static/img/project1.jpg') ;" ></div>

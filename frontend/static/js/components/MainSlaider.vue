@@ -48,7 +48,8 @@
           nextButton: '.main__slider-next',
           prevButton: '.main__slider-prev',
           loop: true,
-          autoplay: 5000
+          autoplay: 5000,
+          speed: 1000
         }
       }
     },

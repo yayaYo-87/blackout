@@ -3,8 +3,8 @@ import Vue from 'vue'
 import App from './views/App.vue'
 import '../styl/global.styl'
 import VueRouter from 'vue-router';
-import store from './store'
-
+import VueYouTubeEmbed from 'vue-youtube-embed'
+import '../styl/scrollbar.css'
 //Страницы
 import index from './views/Index.vue'
 import services from './views/Services.vue'
@@ -13,6 +13,11 @@ import catalog from './views/Catalog.vue'
 import catalogCategory from './views/CatalogCategory.vue'
 import catalogItem from './views/CatalogItem.vue'
 import project from './views/Project.vue'
+import projectCategory from './views/ProjectCategory.vue'
+import projectItem from './views/ProjectItem.vue'
+import partners from './views/Partners.vue'
+import about from './views/About.vue'
+import contacts from './views/Contacts.vue'
 
 //Плагины
 import VueAwesomeSwiper from 'vue-awesome-swiper'
@@ -21,7 +26,8 @@ require('swiper/dist/css/swiper.css')
 
 
 Vue.use(VueRouter);
-Vue.use(VueAwesomeSwiper)
+Vue.use(VueAwesomeSwiper);
+Vue.use(VueYouTubeEmbed)
 
 
 //При переходе скролит до верха
@@ -40,6 +46,11 @@ const router = new VueRouter({
     { path: '/catalog/сategory', name: 'catalogCategory' , component: catalogCategory},
     { path: '/catalog/сategory/catalogItem', name: 'catalogItem' , component: catalogItem},
     { path: '/project', name: 'project' , component: project},
+    { path: '/project/category', name: 'projectCategory' , component: projectCategory},
+    { path: '/project/category/projectItem', name: 'projectItem' , component: projectItem},
+    { path: '/partners', name: 'partners' , component: partners},
+    { path: '/about', name: 'about' , component: about},
+    { path: '/contacts', name: 'contacts' , component: contacts},
   ]
 });
 
@@ -55,11 +66,12 @@ new Vue({
     project,
     swiper,
     swiperSlide,
-    catalogItem
-
+    catalogItem,
+    partners,
+    about,
+    contacts
   },
   router: router,
-  store,
   render: h => h(App),
 
 }).$mount('#app');

@@ -2,9 +2,12 @@
   width: 100%
   margin-top: 70px
   max-height: 700px
-  height:  100vh
+  height:  700px
   overflow: hidden
   position: relative
+  &_swiperTop{
+    height: 700px
+  }
   &-img{
     position: absolute
     top: 0px
@@ -13,18 +16,23 @@
     width: 100%
   }
   &-wrapper{
-    position: absolute
+    position: absolute !important
     height: 200px
     width: 100%
     left: 0px
+    z-index: 2
     bottom: 0px
     display: flex
+    .swiper-wrapper{
+      transform none !important
+    }
   }
   &_items{
     width: 1259px
     margin 0 auto
     display: flex
     position: relative
+    overflow: visible !important
     &:after{
       content: ''
       position: absolute
@@ -48,13 +56,12 @@
   }
   &_item{
     background-color: rgba(0, 0, 0, 0.6)
-    width: 25%
+    width: 25% !important
     cursor: pointer
     position: relative
     transition .5s
     margin-top: 10px
     bottom:0px
-
     &:hover{
       margin-top: 0px
       background-color: rgba(0, 0, 0, 0.9)
@@ -62,6 +69,7 @@
         margin-top: 10px
       }
     }
+
     &-desc{
       font-size 10px
       color: white
@@ -85,6 +93,16 @@
       font-family RobotoLight
       text-transform uppercase
     }
+  }
+  .swiper-slide-active{
+    background-color: rgba(0,0,0,0.9);
+  }
+  &__swiper{
+    width: 100%
+    max-height: 700px
+  }
+  &__img{
+    width: 100%
   }
 }
 
