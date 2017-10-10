@@ -76,6 +76,15 @@ TEMPLATES = [
     },
 ]
 
+SUIT_CONFIG = {
+    'ADMIN_NAME': 'Blackout studio',
+
+    'SEARCH_URL': '',
+    # 'MENU_EXCLUDE': ('auth.group', ),
+
+    'LIST_PER_PAGE': 20
+}
+
 WSGI_APPLICATION = 'config.wsgi.application'
 
 

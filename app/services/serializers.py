@@ -6,7 +6,7 @@ from app.services.models import ServiceDescription, Service
 class ServiceDescriptionSerializer(serializers.ModelSerializer):
     class Meta:
         model = ServiceDescription
-        fields = ['name', 'cover', 'description', 'sort_index']
+        fields = ['id', 'name', 'cover', 'description', 'sort_index']
 
 
 class ServiceSerializer(serializers.ModelSerializer):
