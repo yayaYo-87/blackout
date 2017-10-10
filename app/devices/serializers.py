@@ -5,13 +5,15 @@ from app.devices.models import Producer, Category, SubCategory, Devices
 from app.projects.models import ProjectDevice
 
 
-class CategorySerializer(serializers.ModelSerializer):
+class ProducerSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Category
-        fields = ['id', 'name', 'cover', 'short_desc']
+        model = Producer
+        fields = ['id', 'name', 'cover', 'country']
 
 
 class DevicesSerializer(serializers.ModelSerializer):
+    producer = ProducerSerializer()
+
     class Meta:
         model = Devices
         fields = [
@@ -25,20 +27,13 @@ class DevicesSerializer(serializers.ModelSerializer):
 
 class SubCategorySerializer(serializers.ModelSerializer):
     device_subcategories = DevicesSerializer(many=True)
-    category = CategorySerializer()
 
     class Meta:
         model = SubCategory
-        fields = ['id', 'name', 'category', 'device_subcategories']
+        fields = ['id', 'name', 'device_subcategories']
 
 
-class ProducerSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Producer
-        fields = ['id', 'name', 'cover', 'country']
-
-
-class CategoryDetailSerializer(serializers.ModelSerializer):
+class CategorySerializer(serializers.ModelSerializer):
     cat_subcategories = SubCategorySerializer(many=True)
 
     class Meta:
@@ -103,7 +98,6 @@ class ProjectDetailSerializer(serializers.Serializer):
     class Meta:
         model = Project
         fields = ['id', 'name', 'cover', 'description', 'youtube_link', 'resent', 'category', 'project_devices', 'project_images']
-        # fields = ['id', 'name', 'cover', 'description', 'youtube_link', 'resent', 'category', 'project_images']
 
 
 class ProjectCategoryDetailSrializer(serializers.Serializer):

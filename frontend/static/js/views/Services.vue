@@ -28,7 +28,7 @@
       getServices() {
         let self = this
 
-        axios.get('/api/services/')
+        axios.get('/api/service/')
           .then(
             function (response) {
               self.resultServices = response.data

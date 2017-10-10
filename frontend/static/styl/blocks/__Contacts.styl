@@ -53,8 +53,33 @@
   &__map{
     width: 50%
     flex 1 0 50%
+    position: relative
+    height: 400px
+    background-color #212121
+    &:after{
+      content ''
+      position: absolute
+      top: 0px
+      left: 0px
+      width: 100%
+      height: 100%
+      background: url("/static/img/shape.svg") no-repeat
+      background-size  50px 50px
+      background-position center
+      margin-left: 15px
+      animation: spin 2s linear infinite;
+    }
     &-id{
       height: 400px
+      width: 100%
+      position: relative
+      z-index: 2
     }
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform rotate(360deg)
   }
 }
