@@ -40,8 +40,8 @@ const router = new VueRouter({
   scrollBehavior,
   routes:[
     { path: '/', name: 'index' , component: index},
-    { path: '/services', name: 'services' , component: services},
-    { path: '/services/:id', name: 'servicesItem' , component: servicesItem},
+    { path: '/service', name: 'services' , component: services},
+    { path: '/service/:id', name: 'servicesItem' , component: servicesItem},
     { path: '/catalog', name: 'catalog' , component: catalog},
     { path: '/catalog/сategory', name: 'catalogCategory' , component: catalogCategory},
     { path: '/catalog/сategory/catalogItem', name: 'catalogItem' , component: catalogItem},

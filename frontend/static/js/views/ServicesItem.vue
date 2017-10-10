@@ -31,7 +31,7 @@
         let self = this;
         const id = self.$route.params.id;
 
-        axios.get('/api/services/' + id + '/')
+        axios.get('/api/service/' + id + '/')
           .then(
             function (response) {
               self.result = response.data
