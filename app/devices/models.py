@@ -21,7 +21,7 @@ class Category(models.Model):
     name = models.CharField(verbose_name='Название категории', max_length=256)
     cover = models.ImageField(verbose_name='Выбрать фотографию обложки', blank=True, upload_to=upload_to)
     sort_index = models.PositiveIntegerField(verbose_name='Индекс сортировки', default=0)
-    short_desc = models.CharField(verbose_name='Короткое описание для главной', max_length=256, null=True)
+    short_desc = models.TextField(verbose_name='Короткое описание для главной', null=True)
 
     def __str__(self):
         return self.name
