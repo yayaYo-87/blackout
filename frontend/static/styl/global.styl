@@ -1,5 +1,22 @@
 @import "blocks/__Header.styl"
 @import "blocks/__Fonts.styl"
+@import "blocks/__Main.styl"
+@import "blocks/__MainHeader.styl"
+@import "blocks/__MainProject.styl"
+@import "blocks/__MainSlider.styl"
+@import "blocks/__MainClient.styl"
+@import "blocks/__Footer.styl"
+@import "blocks/__Services.styl"
+@import "blocks/__ServicesItem.styl"
+@import "blocks/__Catalog.styl"
+@import "blocks/__CatalogCategory.styl"
+@import "blocks/__CatalogItem.styl"
+@import "blocks/__Project.styl"
+@import "blocks/__ProjectCategory.styl"
+@import "blocks/__ProjectItem.styl"
+@import "blocks/__Partners.styl"
+@import "blocks/__About.styl"
+@import "blocks/__Contacts.styl"
 
 body, html {
   margin:0
@@ -9,6 +26,7 @@ body, html {
   min-width: 1240px
   font-family: "RobotoRegular"
 }
+
 
 .dn{
   display none !important
@@ -74,3 +92,13 @@ body {
   }
 }
 
+.router-enter-active {
+  transition: all .5s ease;
+}
+.router-leave-active {
+  transition: all .5s ease;
+}
+.router-enter, .router-leave-to{
+  opacity: 0;
+  transform scale(.9)
+}

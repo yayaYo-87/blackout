@@ -31,6 +31,11 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'rest_framework',
+    'suit',
+    'nested_admin',
+    'tinymce',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,14 +43,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'rest_framework',
-    'suit',
-    'nested_admin',
-    'tinymce',
-
-    # 'apps.devices',
-    # 'apps.projects',
-    # 'apps.services',
+    'app.devices',
+    'app.projects',
+    'app.services',
 ]
 
 MIDDLEWARE = [
@@ -75,6 +75,15 @@ TEMPLATES = [
         },
     },
 ]
+
+SUIT_CONFIG = {
+    'ADMIN_NAME': 'Blackout studio',
+
+    'SEARCH_URL': '',
+    # 'MENU_EXCLUDE': ('auth.group', ),
+
+    'LIST_PER_PAGE': 20
+}
 
 WSGI_APPLICATION = 'config.wsgi.application'
 

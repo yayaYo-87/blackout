@@ -1,30 +1,34 @@
 <template>
     <div class="header">
         <div class="header__wrapper">
-            <div class="header__logo"></div>
+            <div class="header__logo">
+                <router-link :to="{ name: 'index' }" class="header__logo_img">
+                    <img src="/static/img/header/logogor.svg" alt="logo">
+                </router-link>
+            </div>
             <div class="header__items">
-                <div class="header__item">
+                <router-link :to="{ name: 'services' }" class="header__item">
                     Услуги
-                </div>
-                <div class="header__item">
+                </router-link>
+                <router-link :to="{ name: 'catalog' }" class="header__item">
                     Оборудование
-                </div>
-                <div class="header__item">
+                </router-link>
+                <router-link :to="{ name: 'project' }" class="header__item">
                     Проекты
-                </div>
-                <div class="header__item">
+                </router-link>
+                <router-link :to="{ name: 'partners' }" class="header__item">
                     Партнеры
-                </div>
-                <div class="header__item">
+                </router-link>
+                <router-link :to="{ name: 'about' }" class="header__item">
                     О компании
-                </div>
-                <div class="header__item">
+                </router-link>
+                <router-link :to="{ name: 'contacts' }" class="header__item">
                     Контакты
-                </div>
+                </router-link>
             </div>
-            <div class="header__tel">
+            <a href="tel:+375 (25) 632 28 29" class="header__tel">
                 +375 (25) 632 28 29
-            </div>
+            </a>
         </div>
     </div>
 </template>

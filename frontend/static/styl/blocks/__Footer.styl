@@ -1,0 +1,115 @@
+.footer{
+  background-color: #333333;
+  max-width: 1440px
+  margin: 0 auto
+  &__wrapper{
+    max-width: 1259px
+    margin: 0 auto
+    padding: 30px 0px
+    display: flex
+    justify-content: space-between
+    align-items center
+  }
+  &__logo{
+    background-color black
+    padding 25px 20px
+    img{
+      width:96px
+    }
+  }
+  &__cop{
+    text-align right
+    padding-right: 40px
+    &_item{
+      padding-bottom: 20px
+      padding-left: 40px
+      color: white
+      font-size: 14px;
+      font-family RobotoLight
+      position: relative
+      &:after{
+        content ''
+        width: 20px
+        background-size 100%
+        height:  20px
+        position: absolute
+        top: -2px
+        right: -40px
+      }
+      &-phone{
+        &:after{
+          background url("/static/img/icon/phonew.svg") no-repeat
+        }
+      }
+      &-mail{
+        &:after{
+          background url("/static/img/icon/mailw.svg") no-repeat
+        }
+      }
+      &-fc{
+        &:after{
+          background url("/static/img/icon/fcw.svg") no-repeat
+        }
+      }
+      &-sk{
+        &:after{
+          background url("/static/img/icon/scw.svg") no-repeat
+        }
+      }
+      &-map{
+        &:after{
+          background url("/static/img/icon/mapw.svg") no-repeat
+        }
+      }
+      a{
+        color: white
+        transition .5s
+        &:hover{
+          color rgba(255, 255, 255, 0.6)
+        }
+      }
+    }
+  }
+}
+
+.footer-white{
+  background-color white
+  .footer__cop_item {
+    color black
+    font-family RobotoRegular
+    a{
+      color black
+    }
+    &-phone{
+      &:after{
+        background url("/static/img/icon/phone1.svg") no-repeat
+      }
+    }
+    &-mail{
+      &:after{
+        background url("/static/img/icon/mail.svg") no-repeat
+      }
+    }
+    &-fc{
+      &:after{
+        background url("/static/img/icon/fc.svg") no-repeat
+      }
+    }
+    &-sk{
+      &:after{
+        background url("/static/img/icon/sk.svg") no-repeat
+      }
+    }
+    &-map{
+      &:after{
+        background url("/static/img/icon/map.svg") no-repeat
+      }
+    }
+  }
+}
+@media (max-width: 1400px) {
+  .footer {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}

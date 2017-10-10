@@ -1,0 +1,118 @@
+.project-item {
+  max-width: 1440px
+  margin: 0 auto
+  margin-top: 70px
+  margin-bottom: 80px
+  &__header {
+    padding: 80px 90px 80px 90px
+    background-color: #333333;
+    &_title {
+      font-size: 20px
+      color: rgba(255, 255, 255, 0.5);
+      text-transform uppercase
+      display: inline-block
+      line-height: 50px
+      padding-right: 20px
+      cursor: pointer
+      font-family RobotoBold
+    }
+    &_name {
+      font-family RobotoBold
+      font-size: 20px
+      color: white;
+      cursor: pointer
+      text-transform uppercase
+      display: inline-block
+      line-height: 50px
+    }
+    &_product {
+      font-size: 40px;
+      font-family RobotoLight
+      color white
+      display: table
+      position: relative
+    }
+    &_date{
+      font-size 14px
+      color: rgba(255, 255, 255, 0.5)
+      line-height: 30px
+    }
+  }
+  &__video{
+    padding-left: 90px
+    padding-right: 90px
+    background-color black
+    max-height: 700px
+    height: 100%
+  }
+  &__desc{
+    font-size: 14px;
+    color: #000
+    max-width: 630px
+    padding: 30px 0px 40px 90px
+    line-height: 25px
+  }
+  &-prev{
+    position: absolute
+    background url("/static/img/arow.svg") no-repeat
+    bottom: 254px
+    left: 118px
+    z-index: 2
+    cursor: pointer
+    background-color rgba(0, 0, 0, 0.6)
+    background-position center center
+    background-size 23px 40px
+    width: 80px
+    height: 80px
+  }
+  &-next{
+    position: absolute
+    background url("/static/img/arow.svg") no-repeat
+    background-position center center
+
+    background-size 23px 40px
+    width: 80px
+    height: 80px
+    bottom: 254px
+    transform rotate(180deg)
+    left: 904px
+    z-index: 2
+    background-color rgba(0, 0, 0, 0.6)
+    cursor: pointer
+  }
+  &__slider{
+    position: relative
+    height: 630px
+    .swiper-container{
+      width: 100%
+      position: absolute
+      height: 100%
+      top: 0px
+      left: 0px
+    }
+  }
+  &__swiper{
+  }
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 920px;
+    height: 613px;
+    opacity: 1
+    transition .5s
+  }
+  .swiper-slide-next {
+    opacity: .5
+  }
+  .swiper-slide-prev{
+    opacity: .5
+  }
+  .swiper-wrapper{
+    left: 90px
+    top: 0px
+  }
+  &__img{
+    height:  100%
+    width: 100%
+  }
+}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+    <g fill="none" fill-rule="evenodd">
+        <circle cx="19.846" cy="20.103" r="11.077" stroke="#FFF" stroke-width="2.051"/>
+        <circle cx="19.846" cy="2.718" r="2.359" fill="#FFF" fill-rule="nonzero"/>
+        <circle cx="20.051" cy="37.436" r="2.359" fill="#FFF" fill-rule="nonzero"/>
+        <circle cx="11.187" cy="5.115" r="2.359" fill="#FFF" fill-rule="nonzero" transform="rotate(-30.001 11.187 5.115)"/>
+        <circle cx="28.722" cy="35.063" r="2.359" fill="#FFF" fill-rule="nonzero" transform="rotate(-30.001 28.722 35.063)"/>
+        <circle cx="4.85" cy="11.47" r="2.359" fill="#FFF" fill-rule="nonzero" transform="rotate(-59.999 4.85 11.47)"/>
+        <circle cx="35.013" cy="28.656" r="2.359" fill="#FFF" fill-rule="nonzero" transform="rotate(-59.999 35.013 28.656)"/>
+        <circle cx="2.564" cy="20.205" r="2.359" fill="#FFF" fill-rule="nonzero"/>
+        <circle cx="37.282" cy="20" r="2.359" fill="#FFF" fill-rule="nonzero"/>
+        <circle cx="4.981" cy="28.856" r="2.359" fill="#FFF" fill-rule="nonzero" transform="rotate(-30.001 4.981 28.856)"/>
+        <circle cx="34.928" cy="11.322" r="2.359" fill="#FFF" fill-rule="nonzero" transform="rotate(-30.001 34.928 11.322)"/>
+        <circle cx="11.348" cy="35.18" r="2.359" fill="#FFF" fill-rule="nonzero" transform="rotate(-59.999 11.348 35.18)"/>
+        <circle cx="28.534" cy="5.016" r="2.359" fill="#FFF" fill-rule="nonzero" transform="rotate(-59.999 28.534 5.016)"/>
+    </g>
+</svg>
