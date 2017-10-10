@@ -7,7 +7,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'blackout',
         'PASSWORD': 'user1111',
-        'HOST': 'localhost',
+        'HOST': 'testblackout-551.postgres.pythonanywhere-services.com',
         'USER': 'super',
         'PORT': '10551'
     }
