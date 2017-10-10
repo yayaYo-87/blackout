@@ -91,25 +91,25 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'blackout',
-        'PASSWORD': 'user1111',
-        'HOST': 'testblackout-551.postgres.pythonanywhere-services.com',
-        'USER': 'super',
-        'PORT': '10551'
-    }
-}
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
 #         'NAME': 'blackout',
-#         'PASSWORD': '1111',
-#         'HOST': 'localhost',
-#         'USER': 'postgres',
+#         'PASSWORD': 'user1111',
+#         'HOST': 'testblackout-551.postgres.pythonanywhere-services.com',
+#         'USER': 'super',
+#         'PORT': '10551'
 #     }
 # }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'blackout',
+        'PASSWORD': '1111',
+        'HOST': 'localhost',
+        'USER': 'postgres',
+    }
+}
 
 
 # Password validation
@@ -148,6 +148,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'frontend', 'static'),
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, '..', 'static_root')
-MEDIA_ROOT = os.path.join(BASE_DIR, '../static_root/', 'media_root')
+STATIC_ROOT = os.path.join(BASE_DIR,  'static_root')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static_root/media_root')
 MEDIA_URL = '/media/'
