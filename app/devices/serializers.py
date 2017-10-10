@@ -5,7 +5,15 @@ from app.devices.models import Producer, Category, SubCategory, Devices
 from app.projects.models import ProjectDevice
 
 
+class ProducerSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Producer
+        fields = ['id', 'name', 'cover', 'country']
+
+
 class DevicesSerializer(serializers.ModelSerializer):
+    producer = ProducerSerializer()
+
     class Meta:
         model = Devices
         fields = [
@@ -23,12 +31,6 @@ class SubCategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = SubCategory
         fields = ['id', 'name', 'device_subcategories']
-
-
-class ProducerSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Producer
-        fields = ['id', 'name', 'cover', 'country']
 
 
 class CategorySerializer(serializers.ModelSerializer):
