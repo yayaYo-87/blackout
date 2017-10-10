@@ -4,10 +4,10 @@ ALLOWED_HOSTS = ['www.testblackout.pythonanywhere.com', 'testblackout.pythonanyw
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'testblackout-551.postgres.pythonanywhere-services.com',
         'NAME': 'blackout',
         'PASSWORD': 'user1111',
-        'HOST': 'testblackout-551.postgres.pythonanywhere-services.com',
+        'HOST': '10551',
         'USER': 'super',
     }
 }
