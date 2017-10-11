@@ -1,7 +1,7 @@
 <template>
-    <div class="main__header" >
+    <div class="main__header" v-if="result.length !== 0">
         <swiper :options="swiperOptionTop" class="main__header_swiperTop" ref="swiperTop">
-            <swiper-slide :key="item.id" v-if=" result[0].top_sliders && result[0].top_sliders.length !== 0" v-for="item in result[0].top_sliders">
+            <swiper-slide :key="item.id"  v-for="item in result[0].top_sliders">
                 <div class="main__header__swiper">
                     <img class="main__header__img" :src="item.cover">
                 </div>
@@ -9,10 +9,10 @@
         </swiper>
         <div class="main__header-wrapper">
             <swiper :options="swiperOptionThumbs"  class="main__header_items" ref="swiperThumbs">
-                <swiper-slide :key="cart.id" class="main__header_item" v-if=" result[0] && result[0].top_sliders.length !== 0" v-for="cart in result[0].top_sliders">
-                    <div class="main__header_item-desc">{{ cart.desc }}</div>
+                <swiper-slide :key="cart.id" class="main__header_item" v-for="cart in result[0].top_sliders">
+                    <div class="main__header_item-desc">{{ cart.description }}</div>
                     <div class="main__header_item-name">{{ cart.name }}</div>
-                    <div class="main__header_item-icon" style="background: url('/static/img/icon123.svg') no-repeat"></div>
+                    <div class="main__header_item-icon" :style="`background-image: url('` + cart.ikon + `') `"></div>
                 </swiper-slide>
             </swiper>
         </div>
