@@ -44,7 +44,7 @@ class CategorySerializer(serializers.ModelSerializer):
 class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Project
-        fields = ['id', 'name', 'cover', 'short_desc', ]
+        fields = ['id', 'name', 'cover', 'short_desc', 'date']
 
 
 class DevicesDetailSerializer(serializers.ModelSerializer):
@@ -66,6 +66,7 @@ class DevicesDetailSerializer(serializers.ModelSerializer):
             'producer_link',
             'projects',
             'description',
+            'you_tube_link'
         ]
 
 

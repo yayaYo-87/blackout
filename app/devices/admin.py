@@ -59,6 +59,7 @@ class DevicesAdmin(admin.ModelAdmin):
                     'sort_index',
                     'is_main',
                     'tag',
+                    'you_tube_link'
                 )
             }
         ),
