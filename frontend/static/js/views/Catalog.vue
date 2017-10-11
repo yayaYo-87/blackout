@@ -14,7 +14,7 @@
                     является создание дизайна площадок, технические расчеты и сопровождающие проекты.</div>
             </div>
             <div class="catalog__item" v-for="item in result" >
-                <router-link :to="{ name: 'catalogCategory', params: { id: item.id} }" >
+                <router-link :to="{ name: 'catalogCategory', params: { id: item.slug} }" >
                     <div class="catalog__item-img" :style="`background-image: url('`+ item.cover + `');`"></div>
                     <div class="catalog__item_text">
                         <div class="catalog__item_text-title">{{ item.name }}</div>
