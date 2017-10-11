@@ -1,5 +1,5 @@
 <template>
-    <router-link tag="div" :to="{ name: 'projectItem', params: { item: item.id}}" class="project-category__recent_item"
+    <router-link tag="div" :to="{ name: 'projectItem', params: { item: item.slug}}" class="project-category__recent_item"
          :class="[itemHeight, itemRight]">
 
         <div class="project-category__recent_item-img" :style="`background-image: url('` + item.cover + `')`" ></div>

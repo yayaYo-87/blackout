@@ -26,7 +26,7 @@
             </div>
             <div class="project__title">Все проекты</div>
             <div class="project__item" v-for="item in result">
-                <router-link tag="div" :to="{ name: 'projectCategory', params: { id: item.id } }">
+                <router-link tag="div" :to="{ name: 'projectCategory', params: { id: item.slug } }">
                     <div class="project__item-img" :style="`background-image: url('` + item.cover + `');`"></div>
                     <div class="project__item_text">
                         <div class="project__item_text-title">{{ item.name }}</div>
