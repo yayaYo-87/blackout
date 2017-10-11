@@ -13,7 +13,7 @@
             <div class="project-item__desc">{{ result.description }}</div>
             <div class="project-item__slider">
                 <swiper :options="swiperOption">
-                    <swiper-slide :key="item.id" v-for="item in result.project_images">
+                    <swiper-slide :key="index" v-for="(item, index) in result.project_images">
                         <div class="project-item__swiper">
                             <img class="project-item__img" :src="item.image">
                         </div>
@@ -24,10 +24,10 @@
             </div>
             <div class="project-item__equipment">
                 <div class="project-item__equipment-title">Оборудование</div>
-                <div class="project-item__equipment_item" v-for="cart in result.project_devices">
+                <div class="project-item__equipment_item" :key="index" v-for="(cart, index) in result.project_devices">
                     <div class="project-item__equipment_item-name">{{ cart.category.name }}</div>
                     <div class="project-item__equipment_item-link">
-                        <span v-for="dev in cart.device">{{ dev.name }},</span>
+                        <router-link tag="span"  :to="{ name: 'catalogItem', params: {id: cart.category.slug, item: dev.id} }"  :key="index.id" v-for="(dev, index) in cart.device">{{ dev.name }},</router-link>
                     </div>
                 </div>
             </div>

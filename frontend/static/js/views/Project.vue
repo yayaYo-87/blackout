@@ -7,7 +7,7 @@
             <div class="project__recent">
                 <div class="project__recent_title">Недавние</div>
                 <div class="project__recent_items">
-                    <router-link :to="{ name: 'projectItem', params: {  item: cart.id , id: cart.category.slug } }" class="project__recent_item" v-for=" cart in resent">
+                    <router-link :to="{ name: 'projectItem', params: {  item: cart.id , id: cart.category.slug } }" class="project__recent_item" :key="cart.id" v-for=" cart in resent">
                         <div class="project__recent_item-img" :style="`background-image: url('` + cart.cover + `') ;`" ></div>
                         <div class="project__recent_item-wrapper">
                             <div class="project__recent_item-wrapper_title">{{ cart.name }}</div>

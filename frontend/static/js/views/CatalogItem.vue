@@ -18,7 +18,7 @@
                     <div class="item__content_project">
                         <div class="item__content_project-title">Использован на мероприятиях:</div>
                         <div class="item__content_project-items">
-                            <div class="item__content_project-item" v-for="item in result.projects">{{ item.name }}</div>
+                            <router-link tag="div" :to="{ name: 'projectItem', params: { id: item.category.slug, item: item.id } }" class="item__content_project-item" :key="index" v-for="(item, index) in result.projects">{{ item.name }}</router-link>
                         </div>
                     </div>
                 </div>
