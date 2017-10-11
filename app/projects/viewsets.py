@@ -1,6 +1,6 @@
 from rest_framework import viewsets
 
-from app.devices.serializers import ProjectCategorySerializer, ProjectCategoryDetailSrializer, ProjectSerializer, \
+from app.devices.serializers import ProjectCategorySerializer, ProjectCategoryDetailSerializer, ProjectSerializer, \
     ProjectDetailSerializer
 from app.projects.models import ProjectCategory, Project
 
@@ -11,11 +11,8 @@ class ProjectCategoryViewSet(viewsets.ModelViewSet):
 
     def get_serializer_class(self):
         if self.action == 'retrieve':
-            return ProjectCategoryDetailSrializer
+            return ProjectCategoryDetailSerializer
         return super(ProjectCategoryViewSet, self).get_serializer_class()
-
-    def get_queryset(self):
-        return Project.objects.filter(resent=False)
 
 
 class ProjectViewSet(viewsets.ModelViewSet):
@@ -27,6 +24,9 @@ class ProjectViewSet(viewsets.ModelViewSet):
             return ProjectDetailSerializer
         return super(ProjectViewSet, self).get_serializer_class()
 
+    def get_queryset(self):
+        return Project.objects.filter(resent=False)
+
 
 class ResentProjectViewSet(viewsets.ModelViewSet):
     queryset = Project.objects.all()
@@ -35,7 +35,7 @@ class ResentProjectViewSet(viewsets.ModelViewSet):
     def get_serializer_class(self):
         if self.action == 'retrieve':
             return ProjectDetailSerializer
-        return super(ProjectViewSet, self).get_serializer_class()
+        return super(ResentProjectViewSet, self).get_serializer_class()
 
     def get_queryset(self):
         return Project.objects.filter(resent=True)
