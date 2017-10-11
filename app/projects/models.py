@@ -19,6 +19,7 @@ class ProjectCategory(models.Model):
 
 
 class Project(models.Model):
+    category = models.ForeignKey('ProjectCategory', verbose_name='Категория проекта', related_name='project_categories')
     name = models.CharField(verbose_name='Название пректа', max_length=256)
     cover = models.ImageField(verbose_name='Выбрать фотографию обложки', blank=True, upload_to=upload_to)
     date = models.DateField(verbose_name='Дата', auto_now=False, auto_now_add=False)
@@ -28,7 +29,6 @@ class Project(models.Model):
     sort_index = models.PositiveIntegerField(verbose_name='Индекс сортировки', default=0)
 
     resent = models.BooleanField(verbose_name='Недавний проект', default=False)
-    category = models.ForeignKey('ProjectCategory', verbose_name='Категория проекта', related_name='project_categories')
 
     def __str__(self):
         return self.name

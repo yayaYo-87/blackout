@@ -116,7 +116,7 @@ class ProjectDetailSerializer(serializers.ModelSerializer):
         fields = ['id', 'name', 'cover', 'description', 'date', 'youtube_link', 'resent', 'category', 'project_devices', 'project_images']
 
 
-class ProjectCategoryDetailSrializer(serializers.ModelSerializer):
+class ProjectCategoryDetailSerializer(serializers.ModelSerializer):
     project_categories = ProjectSerializer(many=True)
 
     class Meta:
