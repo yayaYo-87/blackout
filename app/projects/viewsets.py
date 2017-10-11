@@ -35,7 +35,7 @@ class ResentProjectViewSet(viewsets.ModelViewSet):
     def get_serializer_class(self):
         if self.action == 'retrieve':
             return ProjectDetailSerializer
-        return super(ProjectViewSet, self).get_serializer_class()
+        return super(ResentProjectViewSet, self).get_serializer_class()
 
     def get_queryset(self):
         return Project.objects.filter(resent=True)
