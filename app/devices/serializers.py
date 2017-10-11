@@ -71,11 +71,11 @@ class ProjectCategorySerializer(serializers.ModelSerializer):
 
 
 class ProjectSerializer(serializers.ModelSerializer):
-    project_categories = ProjectCategorySerializer()
+    category = ProjectCategorySerializer()
 
     class Meta:
         model = Project
-        fields = ['id', 'name', 'cover', 'short_desc', 'date', 'project_categories']
+        fields = ['id', 'name', 'cover', 'short_desc', 'date', 'category']
 
 
 class DevicesDetailSerializer(serializers.ModelSerializer):
@@ -123,7 +123,18 @@ class ProjectDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Project
-        fields = ['id', 'name', 'cover', 'description', 'date', 'youtube_link', 'resent', 'category', 'project_devices', 'project_images']
+        fields = [
+            'id',
+            'name',
+            'cover',
+            'description',
+            'date',
+            'youtube_link',
+            'resent',
+            'category',
+            'project_devices',
+            'project_images'
+        ]
 
 
 class ProjectCategoryDetailSerializer(serializers.ModelSerializer):
