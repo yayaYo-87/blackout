@@ -1,14 +1,14 @@
 from rest_framework import viewsets
 
-from app.mainpage.models import Slider
-from app.mainpage.serializers import SliderSerializer, SliderDetaileSerializer
+from app.mainpage.models import TopSlider, BottomSlider
+from app.mainpage.serializers import TopSliderSerializer, BottomSliderSerializer
 
 
-class SliderViewSet(viewsets.ModelViewSet):
-    queryset = Slider.objects.all()
-    serializer_class = SliderSerializer
+class TopSliderViewSet(viewsets.ModelViewSet):
+    queryset = TopSlider.objects.all()
+    serializer_class = TopSliderSerializer
 
-    def get_serializer_class(self):
-        if self.action == 'retrieve':
-            return SliderDetaileSerializer
-        return super(SliderViewSet, self).get_serializer_class()
+
+class BottomSliderViewSet(viewsets.ModelViewSet):
+    queryset = BottomSlider.objects.all()
+    serializer_class = BottomSliderSerializer

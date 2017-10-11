@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from app.mainpage.models import TopSlide, BottomSlide, Slider
+from app.mainpage.models import TopSlide, BottomSlide, TopSlider, BottomSlider
 
 
 class TopSlideSerializer(serializers.ModelSerializer):
@@ -15,16 +15,17 @@ class BottomSlideSerializer(serializers.ModelSerializer):
         fields = ['id', 'name', 'cover', 'description', 'link']
 
 
-class SliderSerializer(serializers.ModelSerializer):
+class TopSliderSerializer(serializers.ModelSerializer):
+    top_sliders = BottomSlideSerializer(many=True, required=False)
+
     class Meta:
-        model = Slider
-        fields = ['id', 'name',]
+        model = TopSlider
+        fields = ['id', 'name', 'top_sliders']
 
 
-class SliderDetaileSerializer(serializers.ModelSerializer):
+class BottomSliderSerializer(serializers.ModelSerializer):
     bottom_sliders = BottomSlideSerializer(many=True, required=False)
-    top_sliders = TopSlideSerializer(many=True, required=False)
 
     class Meta:
-        model = Slider
-        fields = ['id', 'name', 'top_sliders', 'bottom_sliders']
+        model = BottomSlider
+        fields = ['id', 'name', 'bottom_sliders']
