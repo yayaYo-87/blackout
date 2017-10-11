@@ -1,12 +1,13 @@
 from rest_framework import viewsets
 
 from app.devices.models import Devices, Category
-from app.devices.serializers import DevicesSerializer, DevicesDetailSerializer, CategorySerializer
+from app.devices.serializers import DevicesSerializer, DevicesDetailSerializer, CategorySerializer, \
+    CategoryDetailSerializer
 
 
 class CategoryViewSet(viewsets.ModelViewSet):
     queryset = Category.objects.all()
-    serializer_class = CategorySerializer
+    serializer_class = CategoryDetailSerializer
 
 
 class DevicesViewSet(viewsets.ModelViewSet):

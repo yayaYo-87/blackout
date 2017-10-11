@@ -25,6 +25,15 @@ class DevicesSerializer(serializers.ModelSerializer):
         ]
 
 
+class DevicesItemSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Devices
+        fields = [
+            'id',
+            'name',
+        ]
+
+
 class SubCategorySerializer(serializers.ModelSerializer):
     device_subcategories = DevicesSerializer(many=True)
 
@@ -33,12 +42,18 @@ class SubCategorySerializer(serializers.ModelSerializer):
         fields = ['id', 'name', 'device_subcategories']
 
 
-class CategorySerializer(serializers.ModelSerializer):
+class CategoryDetailSerializer(serializers.ModelSerializer):
     cat_subcategories = SubCategorySerializer(many=True)
 
     class Meta:
         model = Category
         fields = ['id', 'name', 'cover', 'short_desc', 'cat_subcategories']
+
+
+class CategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Category
+        fields = ['id', 'name',]
 
 
 class ProjectSerializer(serializers.ModelSerializer):
@@ -84,7 +99,7 @@ class ProjectImageSerializer(serializers.ModelSerializer):
 
 class ProjectDeviceSerializer(serializers.ModelSerializer):
     category = CategorySerializer()
-    device = DevicesSerializer(many=True)
+    device = DevicesItemSerializer(many=True)
 
     class Meta:
         model = ProjectDevice
