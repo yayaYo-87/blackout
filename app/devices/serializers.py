@@ -41,7 +41,7 @@ class CategorySerializer(serializers.ModelSerializer):
         fields = ['id', 'name', 'cover', 'short_desc', 'cat_subcategories']
 
 
-class ProjectSerializer(serializers.Serializer):
+class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Project
         fields = ['id', 'name', 'cover', 'short_desc', ]
@@ -69,19 +69,19 @@ class DevicesDetailSerializer(serializers.ModelSerializer):
         ]
 
 
-class ProjectCategorySerializer(serializers.Serializer):
+class ProjectCategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = ProjectCategory
-        fields = ['id', 'name', 'cover', 'short_desc']
+        fields = ['id', 'name', 'cover']
 
 
-class ProjectImageSerializer(serializers.Serializer):
+class ProjectImageSerializer(serializers.ModelSerializer):
     class Meta:
         model = ProjectImage
         fields = ['id', 'image']
 
 
-class ProjectDeviceSerializer(serializers.Serializer):
+class ProjectDeviceSerializer(serializers.ModelSerializer):
     category = CategorySerializer()
     device = DevicesSerializer(many=True)
 
@@ -90,7 +90,7 @@ class ProjectDeviceSerializer(serializers.Serializer):
         fields = ['id', 'category', 'device']
 
 
-class ProjectDetailSerializer(serializers.Serializer):
+class ProjectDetailSerializer(serializers.ModelSerializer):
     category = ProjectCategorySerializer()
     project_devices = ProjectDeviceSerializer(many=True)
     project_images = ProjectImageSerializer(many=True)
@@ -100,7 +100,7 @@ class ProjectDetailSerializer(serializers.Serializer):
         fields = ['id', 'name', 'cover', 'description', 'youtube_link', 'resent', 'category', 'project_devices', 'project_images']
 
 
-class ProjectCategoryDetailSrializer(serializers.Serializer):
+class ProjectCategoryDetailSrializer(serializers.ModelSerializer):
     project_categories = ProjectSerializer(many=True)
 
     class Meta:

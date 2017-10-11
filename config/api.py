@@ -1,7 +1,7 @@
 from rest_framework.routers import DefaultRouter
 
 from app.devices.viewsets import CategoryViewSet, DevicesViewSet
-from app.projects.viewsets import ProjectViewSet, ProjectCategoryViewSet
+from app.projects.viewsets import ProjectCategoryViewSet, ProjectViewSet
 from app.services.viewsets import ServiceViewSet
 
 router = DefaultRouter()

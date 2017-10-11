@@ -13,8 +13,8 @@ class Producer(models.Model):
         return self.name
 
     class Meta:
-        verbose_name = 'Производитель'
-        verbose_name_plural = 'Производители'
+        verbose_name = 'Производитель оборудования'
+        verbose_name_plural = 'Производители оборудования'
 
 
 class Category(models.Model):
@@ -27,8 +27,8 @@ class Category(models.Model):
         return self.name
 
     class Meta:
-        verbose_name = 'Категория'
-        verbose_name_plural = 'Категории'
+        verbose_name = 'Категория оборудования'
+        verbose_name_plural = 'Категории оборудования'
         ordering = ['sort_index']
 
 
@@ -41,22 +41,22 @@ class SubCategory(models.Model):
         return self.name
 
     class Meta:
-        verbose_name = 'Подкатегория'
-        verbose_name_plural = 'Подкатегории'
+        verbose_name = 'Подкатегория оборудования'
+        verbose_name_plural = 'Подкатегории оборудования'
         ordering = ['sort_index']
 
 
 
 class Devices(models.Model):
-    name = models.CharField(verbose_name='Название услуги', max_length=256)
+    name = models.CharField(verbose_name='Название оборудования', max_length=256)
     cover = models.ImageField(verbose_name='Выбрать фотографию обложки', blank=True, upload_to=upload_to)
     is_main = models.BooleanField(verbose_name='Выводить на главной', default=False)
     sort_index = models.PositiveIntegerField(verbose_name='Индекс сортировки', default=0)
     tag = models.BooleanField(verbose_name='Новинка', default=False)
 
     sub_category = models.ForeignKey('SubCategory', verbose_name='Подкатегория оборудования', related_name='device_subcategories')
-    producer = models.ForeignKey('Producer', verbose_name='Производитель', related_name='device_producers')
-    producer_link = models.URLField(verbose_name='Ссылка на описание производителя', null=True)
+    producer = models.ForeignKey('Producer', verbose_name='Производитель', related_name='device_producers', null=True, blank=False)
+    producer_link = models.URLField(verbose_name='Ссылка на описание производителя', null=True, blank=False)
 
     projects = models.ManyToManyField('projects.Project', verbose_name='Использован на мероприятиях:', blank=True)
     description = HTMLField(verbose_name='Описание проекта', blank=False)

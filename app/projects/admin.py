@@ -15,6 +15,7 @@ class ProjectImageInline(admin.StackedInline):
 class ProjectDeviceInline(admin.StackedInline):
     model = ProjectDevice
     fields = ['category', 'device']
+    filter_horizontal = ['category', 'device']
     extra = 1
     suit_classes = 'suit-tab suit-tab-extra'
 

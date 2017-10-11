@@ -70,6 +70,7 @@ class DevicesAdmin(admin.ModelAdmin):
             }
         )
     ]
+    filter_horizontal = ['projects', ]
     readonly_fields = ['image_img']
 
     def image_img(self, obj):
