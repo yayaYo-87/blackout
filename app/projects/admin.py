@@ -23,7 +23,7 @@ class ProjectDeviceInline(admin.StackedInline):
 @admin.register(ProjectCategory)
 class ProjectCategoryAdmin(admin.ModelAdmin):
     model = ProjectCategory
-    fields = ['name', 'cover', 'image_img', 'sort_index']
+    fields = ['name', 'slug', 'cover', 'image_img', 'sort_index']
     readonly_fields = ['image_img']
 
     def image_img(self, obj):

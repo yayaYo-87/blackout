@@ -23,7 +23,7 @@ class ProducerAdmin(admin.ModelAdmin):
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
     model = Category
-    fields = ['name', 'cover', 'image_img', 'sort_index', 'short_desc']
+    fields = ['name', 'slug', 'cover', 'image_img', 'sort_index', 'short_desc']
     readonly_fields = ['image_img']
 
     def image_img(self, obj):
