@@ -89,26 +89,25 @@ SUIT_CONFIG = {
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'blackout',
-        'PASSWORD': 'user1111',
-        'HOST': 'testblackout-551.postgres.pythonanywhere-services.com',
-        'USER': 'super',
-        'PORT': '10551'
-    }
-}
 # DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#        'NAME': 'blackout',
-#        'PASSWORD': '1111',
-#        'HOST': 'localhost',
-#        'USER': 'postgres',
-#    }
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'blackout',
+#         'PASSWORD': 'user1111',
+#         'HOST': 'testblackout-551.postgres.pythonanywhere-services.com',
+#         'USER': 'super',
+#         'PORT': '10551'
+#     }
 # }
+DATABASES = {
+   'default': {
+       'ENGINE': 'django.db.backends.postgresql_psycopg2',
+       'NAME': 'blackout',
+       'PASSWORD': '1111',
+       'HOST': 'localhost',
+       'USER': 'postgres',
+   }
+}
 
 
 # Password validation
