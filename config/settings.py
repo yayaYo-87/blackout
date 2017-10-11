@@ -101,15 +101,15 @@ DATABASES = {
         'PORT': '10551'
     }
 }
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'blackout',
-#         'PASSWORD': '1111',
-#         'HOST': 'localhost',
-#         'USER': 'postgres',
-#     }
-# }
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#        'NAME': 'blackout',
+#        'PASSWORD': '1111',
+#        'HOST': 'localhost',
+#        'USER': 'postgres',
+#    }
+#}
 
 
 # Password validation
