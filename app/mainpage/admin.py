@@ -5,14 +5,14 @@ from app.mainpage.models import TopSlide, BottomSlide, TopSlider, BottomSlider
 
 class TopSlideInline(admin.StackedInline):
     model = TopSlide
-    fields = ['name', 'sort_index', 'cover', 'image_img', 'ikon', 'ikon_img', 'link']
+    fields = ['name', 'sort_index', 'cover', 'image_img', 'ikon', 'ikon_img', 'description', 'link']
     readonly_fields = ['image_img', 'ikon_img']
     extra = 1
 
 
 class BottomSlideInline(admin.StackedInline):
     model = BottomSlide
-    fields = ['name', 'sort_index', 'cover', 'image_img', 'link']
+    fields = ['name', 'sort_index', 'cover', 'image_img', 'description', 'link']
     readonly_fields = ['image_img',]
     extra = 1
 
