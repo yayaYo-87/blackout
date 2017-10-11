@@ -6,6 +6,7 @@ from app.services.models import upload_to
 
 class ProjectCategory(models.Model):
     name = models.CharField(verbose_name='Название категории', max_length=256)
+    slug = models.SlugField(verbose_name='URL', null=True, blank=False)
     cover = models.ImageField(verbose_name='Выбрать фотографию обложки', blank=True, upload_to=upload_to)
     sort_index = models.PositiveIntegerField(verbose_name='Индекс сортировки', default=0)
 

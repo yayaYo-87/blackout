@@ -8,6 +8,7 @@ from app.projects.models import ProjectCategory, Project
 class ProjectCategoryViewSet(viewsets.ModelViewSet):
     queryset = ProjectCategory.objects.all()
     serializer_class = ProjectCategorySerializer
+    lookup_field = 'slug'
 
     def get_serializer_class(self):
         if self.action == 'retrieve':
