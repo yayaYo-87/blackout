@@ -53,7 +53,7 @@
       }
     },
     created() {
-//      this.get()
+      this.get()
     }
 
   }

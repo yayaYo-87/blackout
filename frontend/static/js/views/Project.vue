@@ -40,12 +40,12 @@
                 </div>
             </div>
             <div class="project__title">Все проекты</div>
-            <div class="project__item" >
-                <router-link tag="div" :to="{ name: 'projectCategory' }">
-                    <div class="project__item-img" style="background-image: url('/static/img/project123.jpg');"></div>
+            <div class="project__item" v-for="item in result">
+                <router-link tag="div" :to="{ name: 'projectCategory', params: { id: item.id } }">
+                    <div class="project__item-img" :style="`background-image: url('` + item.cover + `');`"></div>
                     <div class="project__item_text">
-                        <div class="project__item_text-title">HOT & TOP. EUROPA PLUS TV!</div>
-                        <div class="project__item_text-desc">Телеканал Europa Plus TV открыл 2017 год жаркой вечеринкой на самой большой площадке страны! 20 февраля в Минска-Арене выступили известные исполнители со своими лучшими хитами:Мот, Willy William, Carla’s Dreams, Burak Yeter, Юлианна Караулова, MBAND, Monatik, Alekseev,  ПИЦЦА, Artik& Asti, Ofenbach, Mario Joy, Mahmut Orhan, Алина Артц, SWANKY TUNES, Eric Saade.</div>
+                        <div class="project__item_text-title">{{ item.name }}</div>
+                        <!--<div class="project__item_text-desc">Телеканал Europa Plus TV открыл 2017 год жаркой вечеринкой на самой большой площадке страны! 20 февраля в Минска-Арене выступили известные исполнители со своими лучшими хитами:Мот, Willy William, Carla’s Dreams, Burak Yeter, Юлианна Караулова, MBAND, Monatik, Alekseev,  ПИЦЦА, Artik& Asti, Ofenbach, Mario Joy, Mahmut Orhan, Алина Артц, SWANKY TUNES, Eric Saade.</div>-->
                     </div>
                 </router-link>
             </div>
@@ -67,7 +67,7 @@
         let self = this;
         const id = this.$route.params.item
 
-        axios.get('/api/device/' + id + '/')
+        axios.get('/api/project_category/')
           .then(
             function (response) {
               self.result = response.data
@@ -79,7 +79,7 @@
       }
     },
     created() {
-//      this.get()
+      this.get()
     }
 
   }

@@ -33,7 +33,7 @@ Vue.use(VueYouTubeEmbed)
 
 //При переходе скролит до верха
 const scrollBehavior = (to, from, savedPosition) => {
-    return { x: 0, y: 0 }
+  return { x: 0, y: 0 }
 };
 
 const router = new VueRouter({
@@ -44,11 +44,11 @@ const router = new VueRouter({
     { path: '/service', name: 'services' , component: services},
     { path: '/service/:id', name: 'servicesItem' , component: servicesItem},
     { path: '/catalog', name: 'catalog' , component: catalog},
-    { path: '/catalog/category', name: 'catalogCategory' , component: catalogCategory},
-    { path: '/catalog/category/item', name: 'catalogItem' , component: catalogItem},
+    { path: '/catalog/:id', name: 'catalogCategory' , component: catalogCategory},
+    { path: '/catalog/:id/:item', name: 'catalogItem' , component: catalogItem},
     { path: '/project', name: 'project' , component: project},
-    { path: '/project/category', name: 'projectCategory' , component: projectCategory},
-    { path: '/project/category/item', name: 'projectItem' , component: projectItem},
+    { path: '/project/:id', name: 'projectCategory' , component: projectCategory},
+    { path: '/project/:id/:item', name: 'projectItem' , component: projectItem},
     { path: '/partners', name: 'partners' , component: partners},
     { path: '/about', name: 'about' , component: about},
     { path: '/contacts', name: 'contacts' , component: contacts},
