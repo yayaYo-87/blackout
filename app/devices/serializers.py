@@ -47,19 +47,35 @@ class CategoryDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Category
-        fields = ['id', 'name', 'cover', 'short_desc', 'cat_subcategories']
+        fields = ['id', 'name', 'slug', 'cover', 'short_desc', 'cat_subcategories']
+        lookup_field = 'slug'
+        extra_kwargs = {
+            'url': {'lookup_field': 'slug'}
+        }
 
 
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
-        fields = ['id', 'name',]
+        fields = ['id', 'name', 'slug']
+
+
+class ProjectCategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ProjectCategory
+        fields = ['id', 'name', 'slug', 'cover']
+        lookup_field = 'slug'
+        extra_kwargs = {
+            'url': {'lookup_field': 'slug'}
+        }
 
 
 class ProjectSerializer(serializers.ModelSerializer):
+    category = ProjectCategorySerializer()
+
     class Meta:
         model = Project
-        fields = ['id', 'name', 'cover', 'short_desc', 'date']
+        fields = ['id', 'name', 'cover', 'short_desc', 'date', 'category']
 
 
 class DevicesDetailSerializer(serializers.ModelSerializer):
@@ -85,12 +101,6 @@ class DevicesDetailSerializer(serializers.ModelSerializer):
         ]
 
 
-class ProjectCategorySerializer(serializers.ModelSerializer):
-    class Meta:
-        model = ProjectCategory
-        fields = ['id', 'name', 'cover']
-
-
 class ProjectImageSerializer(serializers.ModelSerializer):
     class Meta:
         model = ProjectImage
@@ -113,7 +123,18 @@ class ProjectDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Project
-        fields = ['id', 'name', 'cover', 'description', 'date', 'youtube_link', 'resent', 'category', 'project_devices', 'project_images']
+        fields = [
+            'id',
+            'name',
+            'cover',
+            'description',
+            'date',
+            'youtube_link',
+            'resent',
+            'category',
+            'project_devices',
+            'project_images'
+        ]
 
 
 class ProjectCategoryDetailSerializer(serializers.ModelSerializer):
@@ -121,4 +142,8 @@ class ProjectCategoryDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = ProjectCategory
-        fields = ['id', 'name', 'project_categories']
+        fields = ['id', 'name', 'slug', 'project_categories']
+        lookup_field = 'slug'
+        extra_kwargs = {
+            'url': {'lookup_field': 'slug'}
+        }

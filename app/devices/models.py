@@ -19,6 +19,7 @@ class Producer(models.Model):
 
 class Category(models.Model):
     name = models.CharField(verbose_name='Название категории', max_length=256)
+    slug = models.SlugField(verbose_name='URL', null=True, blank=False)
     cover = models.ImageField(verbose_name='Выбрать фотографию обложки', blank=True, upload_to=upload_to)
     sort_index = models.PositiveIntegerField(verbose_name='Индекс сортировки', default=0)
     short_desc = models.TextField(verbose_name='Короткое описание для главной', null=True)
@@ -59,7 +60,7 @@ class Devices(models.Model):
     producer_link = models.URLField(verbose_name='Ссылка на описание производителя', null=True, blank=False)
 
     projects = models.ManyToManyField('projects.Project', verbose_name='Использован на мероприятиях:', blank=True)
-    description = HTMLField(verbose_name='Описание проекта', blank=False)
+    description = HTMLField(verbose_name='Описание оборудования', blank=False)
     you_tube_link = models.URLField(verbose_name='Ссылка на демо видео', null=True)
 
     def __str__(self):

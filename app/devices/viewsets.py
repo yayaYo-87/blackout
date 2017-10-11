@@ -8,6 +8,7 @@ from app.devices.serializers import DevicesSerializer, DevicesDetailSerializer, 
 class CategoryViewSet(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategoryDetailSerializer
+    lookup_field = 'slug'
 
 
 class DevicesViewSet(viewsets.ModelViewSet):
