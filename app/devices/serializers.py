@@ -113,7 +113,7 @@ class ProjectDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Project
-        fields = ['id', 'name', 'cover', 'description', 'youtube_link', 'resent', 'category', 'project_devices', 'project_images']
+        fields = ['id', 'name', 'cover', 'description', 'date', 'youtube_link', 'resent', 'category', 'project_devices', 'project_images']
 
 
 class ProjectCategoryDetailSrializer(serializers.ModelSerializer):
