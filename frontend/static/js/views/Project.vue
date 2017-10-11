@@ -7,7 +7,7 @@
             <div class="project__recent">
                 <div class="project__recent_title">Недавние</div>
                 <div class="project__recent_items">
-                    <div class="project__recent_item" v-for=" cart in resent">
+                    <router-link :to="{ name: 'projectItem', params: {  item: cart.id , id: cart.category.slug } }" class="project__recent_item" v-for=" cart in resent">
                         <div class="project__recent_item-img" :style="`background-image: url('` + cart.cover + `') ;`" ></div>
                         <div class="project__recent_item-wrapper">
                             <div class="project__recent_item-wrapper_title">{{ cart.name }}</div>
@@ -16,16 +16,16 @@
                                 <div class="project__recent_item-wrapper-desc">
                                     {{ cart.short_desc }}
                                 </div>
-                                <router-link  :to="{ name: 'projectItem', params: { id: cart.id } }" class="project__recent_item-wrapper_link">
+                                <div class="project__recent_item-wrapper_link">
                                     Подробнее
-                                </router-link>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </router-link>
                 </div>
             </div>
             <div class="project__title">Все проекты</div>
-            <div class="project__item" v-for="item in result">
+            <div class="project__item" :key="item.id" v-for="item in result">
                 <router-link tag="div" :to="{ name: 'projectCategory', params: { id: item.slug } }">
                     <div class="project__item-img" :style="`background-image: url('` + item.cover + `');`"></div>
                     <div class="project__item_text">

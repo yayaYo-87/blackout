@@ -3,7 +3,7 @@
         <div class="project-category__wrapper">
             <div class="project-category__header">
                 <router-link :to="{  name: 'project' }" class="project-category__header_title">Проекты</router-link>
-                <div class="project-category__header_name">Концерты</div>
+                <div class="project-category__header_name">{{ result.name }}</div>
             </div>
             <div class="project-category__recent">
                 <item-project
