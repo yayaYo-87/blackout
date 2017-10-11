@@ -5,19 +5,20 @@ import '../styl/global.styl'
 import VueRouter from 'vue-router';
 import VueYouTubeEmbed from 'vue-youtube-embed'
 import '../styl/scrollbar.css'
+
 //Страницы
-import index from './views/Index.vue'
-import services from './views/Services.vue'
-import servicesItem from './views/ServicesItem.vue'
-import catalog from './views/Catalog.vue'
-import catalogCategory from './views/CatalogCategory.vue'
-import catalogItem from './views/CatalogItem.vue'
-import project from './views/Project.vue'
-import projectCategory from './views/ProjectCategory.vue'
-import projectItem from './views/ProjectItem.vue'
-import partners from './views/Partners.vue'
-import about from './views/About.vue'
-import contacts from './views/Contacts.vue'
+import index from './views/Index.vue';
+import services from './views/Services.vue';
+import servicesItem from './views/ServicesItem.vue';
+import catalog from './views/Catalog.vue';
+import catalogCategory from './views/CatalogCategory.vue';
+import catalogItem from './views/CatalogItem.vue';
+import project from './views/Project.vue';
+import projectCategory from './views/ProjectCategory.vue';
+import projectItem from './views/ProjectItem.vue';
+import partners from './views/Partners.vue';
+import about from './views/About.vue';
+import contacts from './views/Contacts.vue';
 
 //Плагины
 import VueAwesomeSwiper from 'vue-awesome-swiper'
