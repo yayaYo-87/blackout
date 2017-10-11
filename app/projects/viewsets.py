@@ -25,9 +25,6 @@ class ProjectViewSet(viewsets.ModelViewSet):
             return ProjectDetailSerializer
         return super(ProjectViewSet, self).get_serializer_class()
 
-    def get_queryset(self):
-        return Project.objects.filter(resent=False)
-
 
 class ResentProjectViewSet(viewsets.ModelViewSet):
     queryset = Project.objects.all()
