@@ -61,5 +61,5 @@ class ProjectImage(models.Model):
 
 class ProjectDevice(models.Model):
     project = models.ForeignKey('Project', verbose_name='Project', related_name='project_devices',)
-    category = models.ManyToManyField('devices.Category', verbose_name='Категория оборудования', related_name='project_devices_category')
+    category = models.ForeignKey('devices.Category', verbose_name='Категория оборудования', null=True, blank=False)
     device = models.ManyToManyField('devices.Devices', verbose_name='Оборудование', related_name='project_devices')

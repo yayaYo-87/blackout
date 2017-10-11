@@ -16,7 +16,7 @@ class BottomSlideSerializer(serializers.ModelSerializer):
 
 
 class TopSliderSerializer(serializers.ModelSerializer):
-    top_sliders = BottomSlideSerializer(many=True, required=False)
+    top_sliders = TopSlideSerializer(many=True, required=False)
 
     class Meta:
         model = TopSlider
