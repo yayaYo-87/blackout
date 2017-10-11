@@ -44,7 +44,7 @@ class CategorySerializer(serializers.ModelSerializer):
 class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Project
-        fields = ['id', 'name', 'cover', 'short_desc', ]
+        fields = ['id', 'name', 'cover', 'short_desc', 'date']
 
 
 class DevicesDetailSerializer(serializers.ModelSerializer):
