@@ -24,7 +24,7 @@ from config import settings
 urlpatterns = [
     url(r'^api/', include(router.urls, namespace='api')),
     url(r'^admin/', admin.site.urls),
-    url(r'^[a-z]*_?/?[a-z]*_?/?[0-9]*$', IndexView.as_view(), name='index'),
+    url(r'^[a-z]*_?/?[a-z]*_?/?[0-9]*_?/?[0-9]*$', IndexView.as_view(), name='index'),
 ]
 
 if settings.DEBUG:
