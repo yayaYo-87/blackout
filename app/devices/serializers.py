@@ -66,6 +66,7 @@ class DevicesDetailSerializer(serializers.ModelSerializer):
             'producer_link',
             'projects',
             'description',
+            'you_tube_link'
         ]
 
 

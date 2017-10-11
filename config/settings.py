@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'app.devices',
     'app.projects',
     'app.services',
+    'app.mainpage',
 ]
 
 MIDDLEWARE = [
@@ -101,7 +102,7 @@ DATABASES = {
         'PORT': '10551'
     }
 }
-#DATABASES = {
+# DATABASES = {
 #    'default': {
 #        'ENGINE': 'django.db.backends.postgresql_psycopg2',
 #        'NAME': 'blackout',
@@ -109,7 +110,7 @@ DATABASES = {
 #        'HOST': 'localhost',
 #        'USER': 'postgres',
 #    }
-#}
+# }
 
 
 # Password validation
