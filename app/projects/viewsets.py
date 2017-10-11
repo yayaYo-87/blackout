@@ -14,6 +14,9 @@ class ProjectCategoryViewSet(viewsets.ModelViewSet):
             return ProjectCategoryDetailSrializer
         return super(ProjectCategoryViewSet, self).get_serializer_class()
 
+    def get_queryset(self):
+        return Project.objects.filter(resent=False)
+
 
 class ProjectViewSet(viewsets.ModelViewSet):
     queryset = Project.objects.all()
