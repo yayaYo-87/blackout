@@ -7,33 +7,18 @@
             <div class="project__recent">
                 <div class="project__recent_title">Недавние</div>
                 <div class="project__recent_items">
-                    <div class="project__recent_item">
-                        <div class="project__recent_item-img" style="background-image: url('/static/img/project1.jpg') ;" ></div>
+                    <div class="project__recent_item" v-for=" cart in resent">
+                        <div class="project__recent_item-img" :style="`background-image: url('` + cart.cover + `') ;`" ></div>
                         <div class="project__recent_item-wrapper">
-                            <div class="project__recent_item-wrapper_title">Международный фестиваль "рок за бобров"</div>
+                            <div class="project__recent_item-wrapper_title">{{ cart.name }}</div>
                             <div class="project__recent_item-wrapper-flex">
-                                <div class="project__recent_item-wrapper-date">24.07.2017</div>
+                                <div class="project__recent_item-wrapper-date">{{ cart.date }}</div>
                                 <div class="project__recent_item-wrapper-desc">
-                                    22 июля на аэродроме «Боровая» под Минском состоялся десятый музыкальный фестиваль «Рок за Бобров».
+                                    {{ cart.short_desc }}
                                 </div>
-                                <div class="project__recent_item-wrapper_link">
+                                <router-link  :to="{ name: 'projectItem', params: { id: cart.id } }" class="project__recent_item-wrapper_link">
                                     Подробнее
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project__recent_item">
-                        <div class="project__recent_item-img" style="background-image: url('/static/img/project1.jpg') ;" ></div>
-                        <div class="project__recent_item-wrapper">
-                            <div class="project__recent_item-wrapper_title">Международный фестиваль "рок за бобров"</div>
-                            <div class="project__recent_item-wrapper-flex">
-                                <div class="project__recent_item-wrapper-date">24.07.2017</div>
-                                <div class="project__recent_item-wrapper-desc">
-                                    22 июля на аэродроме «Боровая» под Минском состоялся десятый музыкальный фестиваль «Рок за Бобров».
-                                </div>
-                                <div class="project__recent_item-wrapper_link">
-                                    Подробнее
-                                </div>
+                                </router-link>
                             </div>
                         </div>
                     </div>
@@ -59,7 +44,8 @@
   export default {
     data() {
       return {
-        result: []
+        result: [],
+        resent: []
       }
     },
     methods: {
@@ -71,6 +57,15 @@
           .then(
             function (response) {
               self.result = response.data
+            },
+            function (error) {
+              console.log(error)
+            }
+          );
+        axios.get('/api/resent_project/')
+          .then(
+            function (response) {
+              self.resent = response.data
             },
             function (error) {
               console.log(error)

@@ -2,8 +2,8 @@
     <div class="item">
         <div class="item__wrapper">
             <div class="item__header">
-                <div class="item__header_title">Оборудование</div>
-                <div class="item__header_name">Световое оборудование</div>
+                <router-link tag="div" :to="{ name: 'catalog' }" class="item__header_title">Оборудование</router-link>
+                <router-link tag="div" :to="{ name: 'catalogCategory', params: {  id: $route.params.id } }" class="item__header_name">Световое оборудование</router-link>
                 <div class="item__header_product " :class="{'item__header_product-new' : result.tag}">{{ result.name }}</div>
             </div>
             <div class="item__content">
@@ -11,14 +11,14 @@
                     <img :src="result.cover" alt="cover" class="item__content_img">
                     <div class="item__content_video">
                         <div class="item__content_video-text">Демо Видео:</div>
-                        <a href="#">
+                        <a :href="result.you_tube_link" target="_blank">
                             <img src="/static/img/youtube.svg" alt="cover" class="item__content_video-img">
                         </a>
                     </div>
                     <div class="item__content_project">
                         <div class="item__content_project-title">Использован на мероприятиях:</div>
                         <div class="item__content_project-items">
-                            <div class="item__content_project-item">Conte Fashion Show</div>
+                            <div class="item__content_project-item" v-for="item in result.projects">{{ item.name }}</div>
                         </div>
                     </div>
                 </div>

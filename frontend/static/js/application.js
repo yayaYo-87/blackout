@@ -48,7 +48,7 @@ const router = new VueRouter({
     { path: '/catalog/:id/:item', name: 'catalogItem' , component: catalogItem},
     { path: '/project', name: 'project' , component: project},
     { path: '/project/:id', name: 'projectCategory' , component: projectCategory},
-    { path: '/project/:id/:item', name: 'projectItem' , component: projectItem},
+    { path: '/projectitem/:item', name: 'projectItem' , component: projectItem},
     { path: '/partners', name: 'partners' , component: partners},
     { path: '/about', name: 'about' , component: about},
     { path: '/contacts', name: 'contacts' , component: contacts},

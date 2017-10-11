@@ -5,7 +5,7 @@
                 <router-link tag="div" :to="{ name: 'project' }" class="project-item__header_title">Проекты</router-link>
                 <router-link tag="div" :to="{ name: 'projectCategory', params: { id: $route.params.id } }" class="project-item__header_name">Концерты</router-link>
                 <div class="project-item__header_product">{{ result.name }}</div>
-                <div class="project-item__header_date">02.04.2017</div>
+                <div class="project-item__header_date">{{ result.date }}</div>
             </div>
             <div class="project-item__video">
                 <youtube :video-id="videoId" player-height="700" player-width="100%"  ></youtube>
@@ -13,7 +13,7 @@
             <div class="project-item__desc">{{ result.description }}</div>
             <div class="project-item__slider">
                 <swiper :options="swiperOption">
-                    <swiper-slide v-for="item in result.project_images">
+                    <swiper-slide :key="item.id" v-for="item in result.project_images">
                         <div class="project-item__swiper">
                             <img class="project-item__img" :src="item.image">
                         </div>
@@ -24,6 +24,12 @@
             </div>
             <div class="project-item__equipment">
                 <div class="project-item__equipment-title">Оборудование</div>
+                <div class="project-item__equipment_item" v-for="cart in result.project_devices">
+                    <div class="project-item__equipment_item-name">{{ cart.category.name }}</div>
+                    <div class="project-item__equipment_item-link">
+                        <span v-for="dev in cart.device">{{ dev.name }},</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
