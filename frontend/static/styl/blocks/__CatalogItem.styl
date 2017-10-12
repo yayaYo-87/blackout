@@ -31,17 +31,19 @@
       color white
       display: table
       position: relative
-      &:after{
-        position: absolute
-        content 'new'
-        text-transform uppercase
-        font-size: 14px;
-        padding: 17px 9px 17px 30px
-        background-color  #d0011b;
-        font-family RobotoBold
-        top: 0px
-        right: -90px
+      &-new{
+        &:after{
+          position: absolute
+          content 'new'
+          text-transform uppercase
+          font-size: 14px;
+          padding: 17px 9px 17px 30px
+          background-color  #d0011b;
+          font-family RobotoBold
+          top: 0px
+          right: -90px
 
+        }
       }
     }
   }
