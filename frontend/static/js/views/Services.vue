@@ -32,9 +32,11 @@
           .then(
             function (response) {
               self.resultServices = response.data
+              self.$store.dispatch('loader', { value: false })
             },
             function (error) {
               console.log(error)
+              self.$store.dispatch('loader', { value: false })
             }
           )
       }

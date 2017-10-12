@@ -2,93 +2,55 @@
     <div class="project-category">
         <div class="project-category__wrapper">
             <div class="project-category__header">
-                <div class="project-category__header_title">Проекты</div>
-                <div class="project-category__header_name">Концерты</div>
+                <router-link :to="{  name: 'project' }" class="project-category__header_title">Проекты</router-link>
+                <div class="project-category__header_name">{{ result.name }}</div>
             </div>
             <div class="project-category__recent">
-                <item
-                    v-for="(item, index) in result"
-                    :key="index"
-                    :item="item"
-                    :index="index"
-                ></item>
+                <item-project
+                        v-for="(item, index) in result.project_categories"
+                        :key="index"
+                        :item="item"
+                        :index="index"
+                ></item-project>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-  import item from '../components/ProjectCategoryRecent.vue'
+  import axios from 'axios'
+  import itemProject from '../components/ProjectCategoryRecent.vue'
 
   export default {
-    components: {
-      item
-    },
     data() {
       return {
-        result: [
-          {
-            cover: 'background-image: url(\'/static/img/project1.jpg\')',
-            title: 'Международный фестиваль "рок за бобров"',
-            date: '24.07.2017',
-            desc: '22 июля на аэродроме «Боровая» под Минском состоялся десятый музыкальный фестиваль «Рок за Бобров».'
-          },
-          {
-            cover: 'background-image: url(\'/static/img/project1.jpg\')',
-            title: 'Международный фестиваль "рок за бобров"',
-            date: '24.07.2017',
-            desc: '22 июля на аэродроме «Боровая» под Минском состоялся десятый музыкальный фестиваль «Рок за Бобров».'
-          },
-          {
-            cover: 'background-image: url(\'/static/img/project1.jpg\')',
-            title: 'Международный фестиваль "рок за бобров"',
-            date: '24.07.2017',
-            desc: '22 июля на аэродроме «Боровая» под Минском состоялся десятый музыкальный фестиваль «Рок за Бобров».'
-          },
-          {
-            cover: 'background-image: url(\'/static/img/project1.jpg\')',
-            title: 'Международный фестиваль "рок за бобров"',
-            date: '24.07.2017',
-            desc: '22 июля на аэродроме «Боровая» под Минском состоялся десятый музыкальный фестиваль «Рок за Бобров».'
-          },
-          {
-            cover: 'background-image: url(\'/static/img/project1.jpg\')',
-            title: 'Международный фестиваль "рок за бобров"',
-            date: '24.07.2017',
-            desc: '22 июля на аэродроме «Боровая» под Минском состоялся десятый музыкальный фестиваль «Рок за Бобров».'
-          },
-          {
-            cover: 'background-image: url(\'/static/img/project1.jpg\')',
-            title: 'Международный фестиваль "рок за бобров"',
-            date: '24.07.2017',
-            desc: '22 июля на аэродроме «Боровая» под Минском состоялся десятый музыкальный фестиваль «Рок за Бобров».'
-          },
-          {
-            cover: 'background-image: url(\'/static/img/project1.jpg\')',
-            title: 'Международный фестиваль "рок за бобров"',
-            date: '24.07.2017',
-            desc: '22 июля на аэродроме «Боровая» под Минском состоялся десятый музыкальный фестиваль «Рок за Бобров».'
-          },
-          {
-            cover: 'background-image: url(\'/static/img/project1.jpg\')',
-            title: 'Международный фестиваль "рок за бобров"',
-            date: '24.07.2017',
-            desc: '22 июля на аэродроме «Боровая» под Минском состоялся десятый музыкальный фестиваль «Рок за Бобров».'
-          },
-          {
-            cover: 'background-image: url(\'/static/img/project1.jpg\')',
-            title: 'Международный фестиваль "рок за бобров"',
-            date: '24.07.2017',
-            desc: '22 июля на аэродроме «Боровая» под Минском состоялся десятый музыкальный фестиваль «Рок за Бобров».'
-          },
-          {
-            cover: 'background-image: url(\'/static/img/project1.jpg\')',
-            title: 'Международный фестиваль "рок за бобров"',
-            date: '24.07.2017',
-            desc: '22 июля на аэродроме «Боровая» под Минском состоялся десятый музыкальный фестиваль «Рок за Бобров».'
-          },
-        ]
+        result: []
       }
+    },
+    components: {
+      itemProject
+    },
+    methods: {
+      get() {
+        let self = this;
+        const id = this.$route.params.id;
+
+        axios.get('/api/project_category/' + id + '/')
+          .then(
+            function (response) {
+              self.result = response.data
+              self.$store.dispatch('loader', { value: false })
+            },
+            function (error) {
+              console.log(error)
+              self.$store.dispatch('loader', { value: false })
+            }
+          )
+      }
+    },
+    created() {
+      this.get()
     }
+
   }
 </script>
