@@ -28,6 +28,7 @@ class Project(models.Model):
     short_desc = models.TextField(verbose_name='Короткое описание', null=True)
     description = models.TextField(verbose_name='Описание')
     sort_index = models.PositiveIntegerField(verbose_name='Индекс сортировки', default=0)
+    is_main = models.BooleanField(verbose_name='Выводить на главной', default=False)
 
     resent = models.BooleanField(verbose_name='Недавний проект', default=False)
 

@@ -51,7 +51,6 @@ class SubCategory(models.Model):
 class Devices(models.Model):
     name = models.CharField(verbose_name='Название оборудования', max_length=256)
     cover = models.ImageField(verbose_name='Выбрать фотографию обложки', blank=True, upload_to=upload_to)
-    is_main = models.BooleanField(verbose_name='Выводить на главной', default=False)
     sort_index = models.PositiveIntegerField(verbose_name='Индекс сортировки', default=0)
     tag = models.BooleanField(verbose_name='Новинка', default=False)
 

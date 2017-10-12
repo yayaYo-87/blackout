@@ -39,7 +39,7 @@
             },
             function (error) {
               console.log(error)
-              self.$store.dispatch('loader', { value: false })
+
             }
           )
       }

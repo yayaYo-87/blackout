@@ -23,7 +23,7 @@
                     </div>
                 </div>
                 <div class="item__content_right" v-if=" result.producer && result.producer.length !== 0">
-                    <div class="item__content_desc">{{ result.description }}</div>
+                    <div class="item__content_desc" v-html="rawHtml"></div>
                     <a :href="result.producer_link" target="_blank" class="item__content_link">Описание на сайте производителя</a>
                     <div class="item__content_producer">
                         <div class="item__content_producer_title">Производитель</div>
@@ -49,6 +49,11 @@
     data() {
       return {
         result: []
+      }
+    },
+    computed: {
+      rawHtml() {
+        return this.result.description
       }
     },
     methods: {
