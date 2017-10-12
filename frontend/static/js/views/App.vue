@@ -13,7 +13,7 @@
         </div>
       </div>
     </transition>
-    <transition name="router" mode="out-in">
+    <transition name="router" mode="out-in" appear>
       <router-view></router-view>
     </transition>
 
@@ -47,7 +47,7 @@
       }
     },
     watch: {
-      '$route': 'loaderTrue'
+      '$route.path': 'loaderTrue',
     }
   }
 </script>

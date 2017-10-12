@@ -20,7 +20,9 @@
                         <div class="catalog__item_text-title">{{ item.name }}</div>
                         <div class="catalog__item_text-desc">
                             <div class="catalog__item_text-desc_item" v-for="cat in item.cat_subcategories">
-                                <span>{{ cat.name }}</span>
+                                <router-link tag="span" :to="{ name: 'catalogCategory', params: { id: item.slug}, hash: `#w`+ cat.id }">
+                                    {{ cat.name }}
+                                </router-link>
                             </div>
                         </div>
                     </div>
@@ -49,7 +51,6 @@
               self.$store.dispatch('loader', { value: false })
             },
             function (error) {
-              console.log(error)
               self.$store.dispatch('loader', { value: false })
             }
           )
