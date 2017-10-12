@@ -11,7 +11,7 @@
    data-name="Слой 1"
    viewBox="0 0 190 70"
    version="1.1"
-   sodipodi:docname="logo 190x70.svg"
+   sodipodi:docname="logogor.svg"
    inkscape:version="0.92.1 r15371">
   <metadata
      id="metadata77">
@@ -35,16 +35,16 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="640"
-     inkscape:window-height="480"
+     inkscape:window-width="1553"
+     inkscape:window-height="876"
      id="namedview73"
      showgrid="false"
-     inkscape:zoom="1.4578947"
-     inkscape:cx="95"
-     inkscape:cy="35"
-     inkscape:window-x="57"
-     inkscape:window-y="34"
-     inkscape:window-maximized="0"
+     inkscape:zoom="11.663158"
+     inkscape:cx="147.89567"
+     inkscape:cy="41.690728"
+     inkscape:window-x="47"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
      inkscape:current-layer="Слой_1" />
   <title
      id="title2">logo 190x70</title>
@@ -181,7 +181,8 @@
      id="path68"
      style="fill:#ffffff" />
   <path
-     d="M140.61,39.91a2.06,2.06,0,1,1,0-4.11,2.06,2.06,0,0,1,0,4.11Z"
+     d="m 134.6082,39.0526 a 2.06,2.06 0 1 1 0,-4.11 2.06,2.06 0 0 1 0,4.11 z"
      id="path70"
-     style="fill:#ffffff" />
+     style="fill:#ffffff"
+     inkscape:connector-curvature="0" />
 </svg>

@@ -3,6 +3,38 @@
   margin: 0 auto
   margin-top: 70px
   margin-bottom: 80px
+  &__equipment{
+    padding: 80px 90px 80px 90px
+    &_item{
+      &-name{
+        font-size 14px
+        color: #000
+        line-height: 26px
+      }
+      &-link{
+        max-width 610px
+        span{
+          font-size 14px
+          line-height: 26px
+          transition .5s
+          cursor: pointer
+          margin-right: 5px
+          border-bottom 1px solid rgba(0, 0, 0, 0.5)
+          &:hover{
+            border-bottom 1px solid rgba(0, 0, 0, 1)
+          }
+        }
+
+      }
+    }
+    &-title{
+      font-size 20px
+      color: black
+      font-family RobotoBold
+      padding-bottom: 20px
+      text-transform uppercase
+    }
+  }
   &__header {
     padding: 80px 90px 80px 90px
     background-color: #333333;

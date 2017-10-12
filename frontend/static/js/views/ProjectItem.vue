@@ -1,34 +1,21 @@
 <template>
     <div class="project-item">
-        <div class="project-item__wrapper">
+        <div class="project-item__wrapper" v-if="result.length !== 0">
             <div class="project-item__header">
-                <div class="project-item__header_title">Проекты</div>
-                <div class="project-item__header_name">Концерты</div>
-                <div class="project-item__header_product">БИ-2 “THE BEST OF!” Минск-Арена</div>
-                <div class="project-item__header_date">02.04.2017</div>
+                <router-link tag="div" :to="{ name: 'project' }" class="project-item__header_title">Проекты</router-link>
+                <router-link tag="div" :to="{ name: 'projectCategory', params: { id: $route.params.id } }" class="project-item__header_name">Концерты</router-link>
+                <div class="project-item__header_product">{{ result.name }}</div>
+                <div class="project-item__header_date">{{ result.date }}</div>
             </div>
             <div class="project-item__video">
                 <youtube :video-id="videoId" player-height="700" player-width="100%"  ></youtube>
             </div>
-            <div class="project-item__desc">
-                В “Минске-Арене” выступила группа “БИ-2” с программой “THE BEST OF!”. Со сцены прозвучали более двадцати хитов группы. Музыканты исполнили главные композиции из всех выпущенных альбомов – от ранних пластинок до последнего на данный момент студийного издания «#16плюс». Некоторые из них не звучали со сцены до появления программы «THE BEST OF» более 10 лет!
-                Помимо музыкальной составляющей концерта «THE BEST OF» зрители увидели новую сценографию и световое шоу, подготовленное специально для этой программы, а также неизменно мощный рок-н-ролльный «живой» звук, которым славятся все выступления БИ-2.
-            </div>
+            <div class="project-item__desc">{{ result.description }}</div>
             <div class="project-item__slider">
                 <swiper :options="swiperOption">
-                    <swiper-slide>
+                    <swiper-slide :key="index" v-for="(item, index) in result.project_images">
                         <div class="project-item__swiper">
-                            <img class="project-item__img" src="/static/img/project1.jpg">
-                        </div>
-                    </swiper-slide>
-                    <swiper-slide>
-                        <div class="project-item__swiper">
-                            <img class="project-item__img" src="/static/img/project1.jpg">
-                        </div>
-                    </swiper-slide>
-                    <swiper-slide>
-                        <div class="project-item__swiper">
-                            <img class="project-item__img" src="/static/img/project1.jpg">
+                            <img class="project-item__img" :src="item.image">
                         </div>
                     </swiper-slide>
                     <div class="project-item-prev" slot="button-prev"></div>
@@ -36,7 +23,13 @@
                 </swiper>
             </div>
             <div class="project-item__equipment">
-                <!--<div class="project-item__equipment-title">Оборудование</div>-->
+                <div class="project-item__equipment-title">Оборудование</div>
+                <div class="project-item__equipment_item" :key="index" v-for="(cart, index) in result.project_devices">
+                    <div class="project-item__equipment_item-name">{{ cart.category.name }}</div>
+                    <div class="project-item__equipment_item-link">
+                        <router-link tag="span"  :to="{ name: 'catalogItem', params: {id: cart.category.slug, item: dev.id} }"  :key="index.id" v-for="(dev, index) in cart.device">{{ dev.name }},</router-link>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -44,11 +37,10 @@
 
 <script>
   import Swiper from "../../../../node_modules/vue-awesome-swiper/src/swiper.vue";
-
+  import axios from 'axios'
   export default {
     data() {
       return{
-        videoId: 'vt3eYidL_GY',
         swiperOption: {
           paginationClickable: true,
           nextButton: '.project-item-next',
@@ -66,12 +58,35 @@
             modifier: 1,
             slideShadows : true
           }
-
-        }
+        },
+        result: []
+      }
+    },
+    computed: {
+      videoId() {
+        return this.result.youtube_link
+      }
+    },
+    methods: {
+      get() {
+        let self = this;
+        const id = this.$route.params.item;
+        axios.get('/api/project/' + id + '/')
+          .then(
+            function (response) {
+              self.result = response.data
+            },
+            function (error) {
+              console.log(error)
+            }
+          )
       }
     },
     components: {
       Swiper
+    },
+    created() {
+      this.get()
     }
   }
 </script>

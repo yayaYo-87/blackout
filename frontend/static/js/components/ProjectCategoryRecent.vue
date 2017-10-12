@@ -1,15 +1,15 @@
 <template>
-    <router-link tag="div" :to="{ name: 'projectItem'}" class="project-category__recent_item"
+    <router-link tag="div" :to="{ name: 'projectItem', params: { item: item.id}}" class="project-category__recent_item"
          :class="[itemHeight, itemRight]">
 
-        <div class="project-category__recent_item-img" :style="item.cover" ></div>
+        <div class="project-category__recent_item-img" :style="`background-image: url('` + item.cover + `')`" ></div>
         <div class="project-category__recent_item-wrapper">
-            <div class="project-category__recent_item-wrapper_title">{{ item.title }}</div>
+            <div class="project-category__recent_item-wrapper_title">{{ item.name }}</div>
             <div class="project-category__recent_item-wrapper-flex">
                 <div class="project-category__recent_item-wrapper-date">{{ item.date }}</div>
-                <div class="project-category__recent_item-wrapper-desc">{{ item.desc }}</div>
+                <div class="project-category__recent_item-wrapper-desc">{{ item.short_desc }}</div>
                 <div class="project-category__recent_item-wrapper_link">
-                    Подробнее {{index}}
+                    Подробнее
                 </div>
             </div>
         </div>
