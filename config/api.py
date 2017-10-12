@@ -14,7 +14,7 @@ router.register(r'device', DevicesViewSet)
 router.register(r'project_category', ProjectCategoryViewSet)
 router.register(r'project', ProjectViewSet)
 router.register(r'resent_project', ResentProjectViewSet)
-router.register(r'mian_project', MainProjectViewSet)
+router.register(r'main_project', MainProjectViewSet)
 
 router.register(r'top_sliders', TopSliderViewSet)
 router.register(r'bottom_sliders', BottomSliderViewSet)
