@@ -12,7 +12,7 @@
                     <a target="_blank" href="mailto:info@blackout.by">info@blackout.by</a>
                 </div>
                 <div class="footer__cop_item footer__cop_item-fc">
-                    <a href="#" target="_blank">blackoutstudioBY</a>
+                    <a href="https://www.facebook.com/blackoutstudioBY" target="_blank">blackoutstudioBY</a>
                 </div>
                 <div class="footer__cop_item footer__cop_item-sk">
                     <a href="skype:alainprostminsk" target="_blank">alainprostminsk</a>
