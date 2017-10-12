@@ -75,9 +75,11 @@
           .then(
             function (response) {
               self.result = response.data
+              self.$store.dispatch('loader', { value: false })
             },
             function (error) {
               console.log(error)
+              self.$store.dispatch('loader', { value: false })
             }
           )
       }

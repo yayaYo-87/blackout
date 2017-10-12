@@ -53,11 +53,13 @@
                 const swiperThumbs = self.$refs.swiperThumbs.swiper;
                 swiperTop.params.control = swiperThumbs
                 swiperThumbs.params.control = swiperTop
+                self.$store.dispatch('loader', { value: false })
               }, 1000)
 
             },
             function (error) {
               console.log(error)
+              self.$store.dispatch('loader', { value: false })
             }
           )
       }
