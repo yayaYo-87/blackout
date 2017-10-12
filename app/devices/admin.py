@@ -57,7 +57,6 @@ class DevicesAdmin(admin.ModelAdmin):
                     'sub_category',
                     'description',
                     'sort_index',
-                    'is_main',
                     'tag',
                     'you_tube_link'
                 )

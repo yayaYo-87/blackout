@@ -50,6 +50,7 @@ class ProjectAdmin(admin.ModelAdmin):
                     'image_img',
                     'short_desc',
                     'description',
+                    'is_main',
                     'category',
                     'date',
                     'youtube_link',
