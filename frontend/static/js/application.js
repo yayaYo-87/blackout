@@ -5,6 +5,7 @@ import '../styl/global.styl'
 import VueRouter from 'vue-router';
 import VueYouTubeEmbed from 'vue-youtube-embed'
 import '../styl/scrollbar.css'
+import store from './store'
 
 //Страницы
 import index from './views/Index.vue';
@@ -73,6 +74,7 @@ new Vue({
     contacts
   },
   router: router,
+  store,
   render: h => h(App),
 
 }).$mount('#app');

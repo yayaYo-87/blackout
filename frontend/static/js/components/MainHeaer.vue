@@ -2,9 +2,9 @@
     <div class="main__header" v-if="result.length !== 0">
         <swiper :options="swiperOptionTop" class="main__header_swiperTop" ref="swiperTop">
             <swiper-slide :key="item.id"  v-for="item in result[0].top_sliders">
-                <div class="main__header__swiper">
+                <a :href="item.link" class="main__header__swiper">
                     <img class="main__header__img" :src="item.cover">
-                </div>
+                </a>
             </swiper-slide>
         </swiper>
         <div class="main__header-wrapper">
@@ -53,11 +53,13 @@
                 const swiperThumbs = self.$refs.swiperThumbs.swiper;
                 swiperTop.params.control = swiperThumbs
                 swiperThumbs.params.control = swiperTop
+                self.$store.dispatch('loader', { value: false })
               }, 1000)
 
             },
             function (error) {
               console.log(error)
+              self.$store.dispatch('loader', { value: false })
             }
           )
       }

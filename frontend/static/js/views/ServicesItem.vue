@@ -2,7 +2,7 @@
     <div class="services-item">
         <div class="services-item__wrapper">
             <div class="services-item__text">
-                <div class="services-item__title">Услуги</div>
+                <router-link tag="div" :to="{ name: 'services' }" class="services-item__title">Услуги</router-link>
                 <div class="services-item__name">{{ result.name }}</div>
             </div>
             <div class="services-item__cover" :style="`background-image: url('` + result.cover + `')`"></div>
@@ -35,9 +35,11 @@
           .then(
             function (response) {
               self.result = response.data
+              self.$store.dispatch('loader', { value: false })
             },
             function (error) {
               console.log(error)
+              self.$store.dispatch('loader', { value: false })
             }
           )
       }

@@ -96,5 +96,9 @@
 
 <script>
   export default {
+    mounted() {
+      this.$store.dispatch('loader', { value: false })
+    }
+
   }
 </script>

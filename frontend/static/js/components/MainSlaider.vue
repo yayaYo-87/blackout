@@ -2,13 +2,13 @@
     <div class="main__slider" v-if="result.length !== 0">
         <swiper :options="swiperOption">
             <swiper-slide  :key="item.id" v-for="item in result[0].bottom_sliders">
-                <div class="slider">
+                <a :href="item.link" class="slider">
                     <img class="slider__img" :src="item.cover">
                     <div class="slider__text">
                         <div class="slider__text-title">{{item.name}}</div>
                         <div class="slider__text-desc">{{ item.description }}</div>
                     </div>
-                </div>
+                </a>
             </swiper-slide>
             <div class="main__slider-prev" slot="button-prev"></div>
             <div class="main__slider-next" slot="button-next"></div>
