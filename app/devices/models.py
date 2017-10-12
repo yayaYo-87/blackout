@@ -56,11 +56,11 @@ class Devices(models.Model):
 
     sub_category = models.ForeignKey('SubCategory', verbose_name='Подкатегория оборудования', related_name='device_subcategories')
     producer = models.ForeignKey('Producer', verbose_name='Производитель', related_name='device_producers', null=True, blank=False)
-    producer_link = models.URLField(verbose_name='Ссылка на описание производителя', null=True, blank=False)
+    producer_link = models.URLField(verbose_name='Ссылка на описание производителя', null=True, blank=True)
 
     projects = models.ManyToManyField('projects.Project', verbose_name='Использован на мероприятиях:', blank=True)
-    description = HTMLField(verbose_name='Описание оборудования', blank=False)
-    you_tube_link = models.URLField(verbose_name='Ссылка на демо видео', null=True)
+    description = HTMLField(verbose_name='Описание оборудования', blank=True)
+    you_tube_link = models.URLField(verbose_name='Ссылка на демо видео', null=True, blank=True)
 
     def __str__(self):
         return self.name
