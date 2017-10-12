@@ -21,6 +21,18 @@
                 <swiper-slide class="main__client_item">
                     <img src="/static/img/client/c6.png" alt="tape">
                 </swiper-slide>
+                <swiper-slide class="main__client_item">
+                    <img src="/static/img/client/c7.png" alt="tape">
+                </swiper-slide>
+                <swiper-slide class="main__client_item">
+                    <img src="/static/img/client/c8.png" alt="tape">
+                </swiper-slide>
+                <swiper-slide class="main__client_item">
+                    <img src="/static/img/client/c9.png" alt="tape">
+                </swiper-slide>
+                <swiper-slide class="main__client_item">
+                    <img src="/static/img/client/c10.png" alt="tape">
+                </swiper-slide>
             </swiper>
         </div>
     </div>
@@ -35,7 +47,8 @@
           spaceBetween: 40,
           slidesPerView: 8,
           paginationClickable: true,
-          autoplay: 5000,
+          loop: true,
+          autoplay: 1000,
           speed: 1000,
         },
       }
