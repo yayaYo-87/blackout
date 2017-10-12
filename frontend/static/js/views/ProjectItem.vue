@@ -22,9 +22,11 @@
                     <div class="project-item-next" slot="button-next"></div>
                 </swiper>
             </div>
-            <div class="project-item__equipment">
+            <div class="project-item__equipment" v-if="result.project_devices && result.project_devices.length !== 0">
                 <div class="project-item__equipment-title">Оборудование</div>
-                <div class="project-item__equipment_item" :key="index" v-for="(cart, index) in result.project_devices">
+                <div class="project-item__equipment_item"
+                     v-if="cart.device && cart.device.length !== 0"
+                     :key="index" v-for="(cart, index) in result.project_devices">
                     <div class="project-item__equipment_item-name">{{ cart.category.name }}</div>
                     <div class="project-item__equipment_item-link">
                         <router-link tag="span"  :to="{ name: 'catalogItem', params: {id: cart.category.slug, item: dev.id} }"  :key="index.id" v-for="(dev, index) in cart.device">{{ dev.name }},</router-link>
