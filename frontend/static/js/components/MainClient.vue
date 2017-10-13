@@ -33,6 +33,63 @@
                 <swiper-slide class="main__client_item">
                     <img src="/static/img/client/c10.png" alt="tape">
                 </swiper-slide>
+                <swiper-slide class="main__client_item">
+                    <img src="/static/img/client/c12.png" alt="tape">
+                </swiper-slide>
+                <swiper-slide class="main__client_item">
+                    <img src="/static/img/client/c13.png" alt="tape">
+                </swiper-slide>
+                <swiper-slide class="main__client_item">
+                    <img src="/static/img/client/c14.png" alt="tape">
+                </swiper-slide>
+                <swiper-slide class="main__client_item">
+                    <img src="/static/img/client/c15.png" alt="tape">
+                </swiper-slide>
+                <swiper-slide class="main__client_item">
+                    <img src="/static/img/client/c16.png" alt="tape">
+                </swiper-slide>
+                <swiper-slide class="main__client_item">
+                    <img src="/static/img/client/c17.png" alt="tape">
+                </swiper-slide>
+                <swiper-slide class="main__client_item">
+                    <img src="/static/img/client/c18.png" alt="tape">
+                </swiper-slide>
+                <swiper-slide class="main__client_item">
+                    <img src="/static/img/client/c19.png" alt="tape">
+                </swiper-slide>
+                <swiper-slide class="main__client_item">
+                    <img src="/static/img/client/c20.png" alt="tape">
+                </swiper-slide>
+                <swiper-slide class="main__client_item">
+                    <img src="/static/img/client/c21.png" alt="tape">
+                </swiper-slide>
+                <swiper-slide class="main__client_item">
+                    <img src="/static/img/client/c22.png" alt="tape">
+                </swiper-slide>
+                <swiper-slide class="main__client_item">
+                    <img src="/static/img/client/c23.png" alt="tape">
+                </swiper-slide>
+                <swiper-slide class="main__client_item">
+                    <img src="/static/img/client/c24.png" alt="tape">
+                </swiper-slide>
+                <swiper-slide class="main__client_item">
+                    <img src="/static/img/client/c25.png" alt="tape">
+                </swiper-slide>
+                <swiper-slide class="main__client_item">
+                    <img src="/static/img/client/c26.png" alt="tape">
+                </swiper-slide>
+                <swiper-slide class="main__client_item">
+                    <img src="/static/img/client/c27.png" alt="tape">
+                </swiper-slide>
+                <swiper-slide class="main__client_item">
+                    <img src="/static/img/client/c28.png" alt="tape">
+                </swiper-slide>
+                <swiper-slide class="main__client_item">
+                    <img src="/static/img/client/c29.png" alt="tape">
+                </swiper-slide>
+                <swiper-slide class="main__client_item">
+                    <img src="/static/img/client/c30.png" alt="tape">
+                </swiper-slide>
             </swiper>
         </div>
     </div>
