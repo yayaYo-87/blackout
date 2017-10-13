@@ -22,7 +22,7 @@
                     <div class="project-item-next" slot="button-next"></div>
                 </swiper>
             </div>
-            <div class="project-item__equipment" v-if="result.project_devices && result.project_devices.length !== 0">
+            <div class="project-item__equipment" v-if="result.project_devices[0].device && result.project_devices[0].device.length !== 0">
                 <div class="project-item__equipment-title">Оборудование</div>
                 <div class="project-item__equipment_item"
                      v-if="cart.device && cart.device.length !== 0"
