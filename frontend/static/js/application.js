@@ -6,6 +6,7 @@ import VueRouter from 'vue-router';
 import VueYouTubeEmbed from 'vue-youtube-embed'
 import '../styl/scrollbar.css'
 import store from './store'
+var VueScrollTo = require('vue-scrollto');
 
 //Страницы
 import index from './views/Index.vue';
@@ -29,12 +30,29 @@ require('swiper/dist/css/swiper.css')
 
 Vue.use(VueRouter);
 Vue.use(VueAwesomeSwiper);
-Vue.use(VueYouTubeEmbed)
-
+Vue.use(VueYouTubeEmbed);
+Vue.use(VueScrollTo, {
+     container: "body",
+     duration: 500,
+     easing: "ease",
+     offset: -80,
+     cancelable: true,
+     onDone: false,
+     onCancel: false,
+     x: false,
+     y: true
+ })
 
 //При переходе скролит до верха
 const scrollBehavior = (to, from, savedPosition) => {
-  return { x: 0, y: 0 }
+  if (to.hash) {
+    console.log(to.hash)
+    return {
+      selector: to.hash,
+    }
+  } else {
+    return { x: 0, y: 0 }
+  }
 };
 
 const router = new VueRouter({

@@ -9,22 +9,35 @@
             <div class="item__content">
                 <div class="item__content_left">
                     <img :src="result.cover" alt="cover" class="item__content_img">
-                    <div class="item__content_video">
+                    <div class="item__content_video" v-if=" result.you_tube_link && result.you_tube_link.length !== 0">
                         <div class="item__content_video-text">Демо Видео:</div>
                         <a :href="result.you_tube_link" target="_blank">
                             <img src="/static/img/youtube.svg" alt="cover" class="item__content_video-img">
                         </a>
                     </div>
-                    <div class="item__content_project">
+                    <div class="item__content_project" v-if="result.projects && result.projects.length !== 0">
                         <div class="item__content_project-title">Использован на мероприятиях:</div>
                         <div class="item__content_project-items">
-                            <router-link tag="div" :to="{ name: 'projectItem', params: { id: item.category.slug, item: item.id } }" class="item__content_project-item" :key="index" v-for="(item, index) in result.projects">{{ item.name }}</router-link>
+                            <router-link tag="div"
+                                         :to="{ name: 'projectItem', params:
+                                         { id: item.category.slug, item: item.id } }"
+                                         class="item__content_project-item"
+                                         :key="index"
+                                         v-for="(item, index) in result.projects">
+                                {{ item.name }}
+                            </router-link>
                         </div>
                     </div>
                 </div>
                 <div class="item__content_right" v-if=" result.producer && result.producer.length !== 0">
                     <div class="item__content_desc" v-html="rawHtml"></div>
-                    <a :href="result.producer_link" target="_blank" class="item__content_link">Описание на сайте производителя</a>
+                    <a :href="result.producer_link"
+                       target="_blank"
+                       class="item__content_link"
+                        v-if="result.producer_link !== null"
+                    >
+                        Описание на сайте производителя
+                    </a>
                     <div class="item__content_producer">
                         <div class="item__content_producer_title">Производитель</div>
                         <div class="item__content_producer_item">

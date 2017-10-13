@@ -6,11 +6,11 @@
                 <div class="category__header_name">{{ result.name }}</div>
                 <div class="category__header_link">
                     <div class="category__header_link-item" v-for="header in result.cat_subcategories">
-                        <a href="#">{{ header.name }}</a>
+                        <a href="#" v-scroll-to="'#w' + header.id">{{ header.name }}</a>
                     </div>
                 </div>
             </div>
-            <div class="category__items"  :key="item.id" v-for="item in result.cat_subcategories">
+            <div class="category__items" :id="`w` + item.id" :key="item.id" v-for="item in result.cat_subcategories">
                 <div class="category__items_name">{{ item.name }}</div>
                 <div class="category__items_wrapper" >
                     <router-link :to="{ name: 'catalogItem', params: { item: cart.id } }"  :key="cart.id" v-for="cart in item.device_subcategories" class="category__item">
@@ -46,17 +46,26 @@
             function (response) {
               self.result = response.data
               self.$store.dispatch('loader', { value: false })
+              setTimeout(function () {
+                self.scrollTo()
+              }, 300);
             },
             function (error) {
               console.log(error)
               self.$store.dispatch('loader', { value: false })
             }
           )
+      },
+      scrollTo(){
+        const element = this.$route.hash
+        if (element.length !== 0 ){
+          this.$scrollTo(element)
+        }
       }
     },
     created() {
       this.get()
-    }
+    },
 
   }
 </script>
