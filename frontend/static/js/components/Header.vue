@@ -26,8 +26,8 @@
                     Контакты
                 </router-link>
             </div>
-            <a href="tel:+375 (25) 632 28 29" class="header__tel">
-                +375 (25) 632 28 29
+            <a href="tel:+74954097400" class="header__tel">
+                +7 (495) 409 74 00
             </a>
         </div>
     </div>

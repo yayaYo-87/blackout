@@ -6,10 +6,10 @@
             </div>
             <div class="footer__cop">
                 <div class="footer__cop_item footer__cop_item-phone">
-                    <a href="tel:+375 (25) 632 28 29">+375 (25) 632 28 29</a>
+                    <a href="tel:+74954097400">+7 (495) 409 74 00</a>
                 </div>
                 <div class="footer__cop_item footer__cop_item-mail">
-                    <a target="_blank" href="mailto:info@blackout.by">info@blackout.by</a>
+                    <a target="_blank" href="mailto:office@blackout.moscow">office@blackout.moscow</a>
                 </div>
                 <div class="footer__cop_item footer__cop_item-fc">
                     <a href="https://www.facebook.com/blackoutstudioBY" target="_blank">blackoutstudioBY</a>

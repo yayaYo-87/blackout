@@ -46,51 +46,6 @@
                 </div>
             </div>
         </div>
-        <div class="about__item">
-            <div class="about__item_title">Команда свет и звук</div>
-            <div class="about__item_image">
-                <div class="about__item_image-img" style="background-image: url('/static/img/about2.png')"></div>
-                <div class="about__item_image-text">
-                    <div class="about__item_image-text-name">Сергей Гуренда</div>
-                </div>
-            </div>
-            <div class="about__item_image">
-                <div class="about__item_image-img" style="background-image: url('/static/img/about3.png')"></div>
-                <div class="about__item_image-text">
-                    <div class="about__item_image-text-name">Олег Шкиндеров</div>
-                </div>
-            </div>
-            <div class="about__item_image">
-                <div class="about__item_image-img" style="background-image: url('/static/img/about4.png')"></div>
-                <div class="about__item_image-text">
-                    <div class="about__item_image-text-name">Сергей Кольцов</div>
-                </div>
-            </div>
-            <div class="about__item_image">
-                <div class="about__item_image-img" style="background-image: url('/static/img/about5.jpg')"></div>
-                <div class="about__item_image-text">
-                    <div class="about__item_image-text-name">Виктор Крылов</div>
-                </div>
-            </div>
-            <div class="about__item_image">
-                <div class="about__item_image-img" style="background-image: url('/static/img/about6.jpg')"></div>
-                <div class="about__item_image-text">
-                    <div class="about__item_image-text-name">Ярослав Стецук</div>
-                </div>
-            </div>
-            <div class="about__item_image">
-                <div class="about__item_image-img" style="background-image: url('/static/img/about7.jpg')"></div>
-                <div class="about__item_image-text">
-                    <div class="about__item_image-text-name">Игорь Пиотровский</div>
-                </div>
-            </div>
-            <div class="about__item_image">
-                <div class="about__item_image-img" style="background-image: url('/static/img/about8.png')"></div>
-                <div class="about__item_image-text">
-                    <div class="about__item_image-text-name">Максим Пархамович</div>
-                </div>
-            </div>
-        </div>
     </div>
 </template>
 
