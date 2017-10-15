@@ -10,27 +10,12 @@
                 <div class="contacts__item_title">Главный офис</div>
                 <div class="contacts__item_desc">Наш офис находится в магазине “Свет и Звук”</div>
                 <div class="contacts__item_text">г. Минск,  улица Богдановича,  дом 60</div>
-                <div class="contacts__item_desc">Телефон/факс:</div>
-                <a href="tel:+375 (17) 283 88 83" class="contacts__item_text">+375 (17) 283 88 83</a>
-                <div class="contacts__item_desc">По вопросам аренды оборудования обращайтесь по телефонам:</div>
-                <a href="tel:+375 (25) 632 28 29" class="contacts__item_text">+375 (25) 632 28 29 — Игорь</a>
-                <a href="tel:+375 (29) 119 80 25" class="contacts__item_text">+375 (29) 119 80 25 — Илья</a>
-                <div class="contacts__item_email">info@blackout.by </br>office@blackout.by</div>
+                <div class="contacts__item_desc">Телефон:</div>
+                <a href="tel:+74954097400" class="contacts__item_text">+7 (495) 409 74 00</a>
+                <a href="mailto:office@blackout.moscow" class="contacts__item_email">office@blackout.moscow</a>
             </div>
             <div class="contacts__map">
                 <div class="contacts__map-id" id="map1"></div>
-            </div>
-        </div>
-        <div class="contacts__items">
-            <div class="contacts__item">
-                <div class="contacts__item_title">Склад</div>
-                <div class="contacts__item_desc">Наш склад находится в районе военного аэродрома Липки</div>
-                <div class="contacts__item_text">г. Минск, ул.  Липковская 9/2, 1200 м от МКАД</div>
-                <div class="contacts__item_desc">Телефон склада:</div>
-                <a href="tel:+375 (29) 656 34 56" class="contacts__item_text">+375 (29) 656 34 56 — Андрей</a>
-            </div>
-            <div class="contacts__map">
-                <div class="contacts__map-id" id="map2"></div>
             </div>
         </div>
     </div>
@@ -71,43 +56,6 @@
           s.onerror = s.onabort = reject;
           t.parentNode.insertBefore(s, t);
         });
-      },
-      readyMap2(){
-        var myMap = new ymaps.Map('map2', {
-            center: [53.919728, 27.703819],
-            zoom: 16,
-            controls: []
-          }, {
-            searchControlProvider: 'yandex#search'
-          }),
-
-          // Создаём макет содержимого.
-          MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-          ),
-
-          myPlacemarkWithContent = new ymaps.Placemark([53.919728, 27.703819], {
-            hintContent: 'г. Минск, ул. Липковская 9/2, 1200 м от МКАД',
-            balloonContent: 'г. Минск, ул. Липковская 9/2, 1200 м от МКАД',
-          }, {
-            // Опции.
-            // Необходимо указать данный тип макета.
-            iconLayout: 'default#imageWithContent',
-            // Своё изображение иконки метки.
-            iconImageHref: '/static/img/Group.svg',
-            // Размеры метки.
-            iconImageSize: [37, 48],
-            // Смещение левого верхнего угла иконки относительно
-            // её "ножки" (точки привязки).
-            iconImageOffset: [-15, -40],
-            // Смещение слоя с содержимым относительно слоя с картинкой.
-            iconContentOffset: [15, 15],
-            // Макет содержимого.
-            iconContentLayout: MyIconContentLayout
-          });
-
-        myMap.geoObjects
-          .add(myPlacemarkWithContent);
       },
       readyMap(){
         var myMap = new ymaps.Map('map1', {
@@ -152,7 +100,6 @@
         let self = this;
         ymaps.ready(function () {
           self.readyMap()
-          self.readyMap2()
         })
       });
     },
