@@ -11,15 +11,6 @@
                 <div class="footer__cop_item footer__cop_item-mail">
                     <a target="_blank" href="mailto:office@blackout.moscow">office@blackout.moscow</a>
                 </div>
-                <div class="footer__cop_item footer__cop_item-fc">
-                    <a href="https://www.facebook.com/blackoutstudioBY" target="_blank">blackoutstudioBY</a>
-                </div>
-                <div class="footer__cop_item footer__cop_item-sk">
-                    <a href="skype:alainprostminsk" target="_blank">alainprostminsk</a>
-                </div>
-                <div class="footer__cop_item footer__cop_item-map">
-                    Республика Беларусь, 220002 Минск, ул. Богдановича, 60
-                </div>
             </div>
         </div>
     </div>

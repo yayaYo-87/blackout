@@ -12,7 +12,6 @@
                         <div class="project__recent_item-wrapper">
                             <div class="project__recent_item-wrapper_title">{{ cart.name }}</div>
                             <div class="project__recent_item-wrapper-flex">
-                                <div class="project__recent_item-wrapper-date">{{ cart.date }}</div>
                                 <div class="project__recent_item-wrapper-desc">
                                     {{ cart.short_desc }}
                                 </div>
