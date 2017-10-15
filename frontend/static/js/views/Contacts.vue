@@ -9,7 +9,7 @@
             <div class="contacts__item">
                 <div class="contacts__item_title">Главный офис</div>
                 <div class="contacts__item_desc">Наш офис находится в магазине “Свет и Звук”</div>
-                <div class="contacts__item_text">г. Минск,  улица Богдановича,  дом 60</div>
+                <div class="contacts__item_text">г.Москва, Новодмитровская улица, 1с1</div>
                 <div class="contacts__item_desc">Телефон:</div>
                 <a href="tel:+74954097400" class="contacts__item_text">+7 (495) 409 74 00</a>
                 <a href="mailto:office@blackout.moscow" class="contacts__item_email">office@blackout.moscow</a>
@@ -59,7 +59,7 @@
       },
       readyMap(){
         var myMap = new ymaps.Map('map1', {
-            center: [53.920439, 27.567688],
+            center: [55.806515, 37.584667],
             zoom: 16,
             controls: []
           }, {
@@ -71,7 +71,7 @@
             '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
           ),
 
-          myPlacemarkWithContent = new ymaps.Placemark([53.920439, 27.567688], {
+          myPlacemarkWithContent = new ymaps.Placemark([55.806515, 37.584667], {
             hintContent: 'г. Минск, улица Богдановича, дом 60',
             balloonContent: 'г. Минск, улица Богдановича, дом 60',
           }, {
