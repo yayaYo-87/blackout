@@ -1,13 +1,16 @@
 <template>
     <div class="main__header" v-if="result.length !== 0">
         <div  class="main__header_swiperTop">
-            <div class="main__header__wrapper">
-                <video class="main__header-img" muted="muted" loop="loop" autoplay="autoplay">
-                    <source src="/static/img/video.mp4" type="video/mp4">
-                </video>
-            </div>
+            <iframe width="100%" height="100%"
+                    src="https://www.youtube.com/embed/x2SrbPTNKZM?version=3&autoplay=1&loop=1&playlist=x2SrbPTNKZM&mute=1&&playerapiid=featuredytplayer&controls=0&modestbranding=1&rel=0&showinfo=0&color=white&iv_load_policy=3&theme=light&wmode=transparent&origin=http://testblackout.pythonanywhere.com/"
+                    frameborder="0"
+                    allowfullscreen
+            >
+
+            </iframe>
         </div>
         <div class="main__header-wrapper">
+
             <div  class="main__header_items">
                 <a :href="cart.link" :key="cart.id" class="main__header_item" v-for="cart in result[0].top_sliders">
                     <div class="main__header_item-desc">{{ cart.description }}</div>
@@ -26,7 +29,7 @@
     components: {SwiperSlide},
     data() {
       return {
-        result: []
+        result: [],
       }
     },
     methods: {

@@ -11,7 +11,6 @@
                 <div class="main__project_item-wrapper">
                     <div class="main__project_item-wrapper_title">{{ result[0].name }}</div>
                     <div class="main__project_item-wrapper-flex">
-                        <div class="main__project_item-wrapper-date">{{ result[0].date }}</div>
                         <div class="main__project_item-wrapper-desc">
                             {{ result[0].short_desc }}
                         </div>
@@ -27,7 +26,6 @@
                 <div class="main__project_item-wrapper">
                     <div class="main__project_item-wrapper_title">{{ result[1].name }}</div>
                     <div class="main__project_item-wrapper-flex">
-                        <div class="main__project_item-wrapper-date">{{ result[1].date }}</div>
                         <div class="main__project_item-wrapper-desc">
                             {{ result[1].short_desc }}
                         </div>
@@ -44,7 +42,6 @@
                     <div class="main__project_item-wrapper">
                         <div class="main__project_item-wrapper_title">{{ result[2].name }}</div>
                         <div class="main__project_item-wrapper-flex">
-                            <div class="main__project_item-wrapper-date">{{ result[2].date }}</div>
                             <div class="main__project_item-wrapper-desc">
                                 {{ result[2].short_desc }}
                             </div>
@@ -60,7 +57,6 @@
                     <div class="main__project_item-wrapper">
                         <div class="main__project_item-wrapper_title">{{ result[3].name }}</div>
                         <div class="main__project_item-wrapper-flex">
-                            <div class="main__project_item-wrapper-date">{{ result[3].date }}</div>
                             <div class="main__project_item-wrapper-desc">
                                 {{ result[3].short_desc }}
                             </div>

@@ -6,7 +6,6 @@
         <div class="project-category__recent_item-wrapper">
             <div class="project-category__recent_item-wrapper_title">{{ item.name }}</div>
             <div class="project-category__recent_item-wrapper-flex">
-                <div class="project-category__recent_item-wrapper-date">{{ item.date }}</div>
                 <div class="project-category__recent_item-wrapper-desc">{{ item.short_desc }}</div>
                 <div class="project-category__recent_item-wrapper_link">
                     Подробнее
