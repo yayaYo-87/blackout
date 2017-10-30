@@ -22,7 +22,7 @@
                     <div class="project-item-next" slot="button-next"></div>
                 </swiper>
             </div>
-            <div class="project-item__equipment" v-if="result.project_devices[0].device && result.project_devices[0].device.length !== 0">
+            <div class="project-item__equipment" v-if="devisec">
                 <div class="project-item__equipment-title">Оборудование</div>
                 <div class="project-item__equipment_item"
                      v-if="cart.device && cart.device.length !== 0"
@@ -51,7 +51,7 @@
           pagination: '.swiper-pagination',
           grabCursor: true,
           slidesPerView: 'auto',
-          autoplay: 5000,
+//          autoplay: 5000,
           speed: 1000,
           coverflow: {
             rotate: 50,
@@ -67,6 +67,9 @@
     computed: {
       videoId() {
         return this.result.youtube_link
+      },
+      devisec(){
+        return this.result.project_devices.length !== 0
       }
     },
     methods: {
