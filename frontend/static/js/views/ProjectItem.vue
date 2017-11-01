@@ -7,7 +7,7 @@
                 <div class="project-item__header_product">{{ result.name }}</div>
                 <div class="project-item__header_date">{{ result.date }}</div>
             </div>
-            <div class="project-item__video">
+            <div class="project-item__video" v-if="videoId">
                 <youtube :video-id="videoId" player-height="700" player-width="100%"  ></youtube>
             </div>
             <div class="project-item__desc">{{ result.description }}</div>
@@ -66,7 +66,7 @@
     },
     computed: {
       videoId() {
-        return this.result.youtube_link
+        return null
       },
       devisec(){
         return this.result.project_devices.length !== 0
