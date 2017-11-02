@@ -1,6 +1,6 @@
 from config.settings import *
 DEBUG = False
-ALLOWED_HOSTS = ['www.testblackout.pythonanywhere.com', 'testblackout.pythonanywhere.com']
+ALLOWED_HOSTS = ['www.testblackout.pythonanywhere.com', 'testblackout.pythonanywhere.com', 'www.blackout.moscow', 'blackout.moscow']
 
 DATABASES = {
     'default': {
@@ -17,7 +17,8 @@ ADMINS = [
     ('Blackout', 'zubkov@smoothie.digital')
 ]
 
-SITE_HOST = 'testblackout.pythonanywhere.com'
+# SITE_HOST = 'testblackout.pythonanywhere.com'
+SITE_HOST = 'www.blackout.moscow'
 
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.yandex.ru'
