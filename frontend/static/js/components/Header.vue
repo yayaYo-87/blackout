@@ -16,6 +16,7 @@
                 <router-link :to="{ name: 'project' }" class="header__item">
                     Проекты
                 </router-link>
+
                 <router-link :to="{ name: 'partners' }" class="header__item">
                     Партнеры
                 </router-link>
