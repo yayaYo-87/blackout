@@ -23,27 +23,6 @@
             <div class="about__text_title">Миссия компании</div>
             <div class="about__text_desc">Нести свет людям!</div>
         </div>
-        <div class="about__text">
-            <div class="about__text_title">Команда</div>
-            <div class="about__text_desc">
-                BlackOut Studio- сплоченная команда профессионалов, способная выполнить любое желание
-                заказчика. У нас есть опыт работы со многими техническими коллективами со всего мира,
-                мы можем выполнить райдер любого артиста мировой величины .</br>
-                Трудолюбивость нашего коллектива подтверждается богатым портфолио наших работ. Все
-                наши специалисты влюблены в свое дело и делают его профессионально и эффектно.</br>
-                Знакомьтесь – наша команда:
-            </div>
-        </div>
-        <div class="about__item">
-            <div class="about__item_title">Руководство</div>
-            <div class="about__item_image">
-                <div class="about__item_image-img" style="background-image: url('/static/img/about1.jpg')"></div>
-                <div class="about__item_image-text">
-                    <div class="about__item_image-text-title">Руководитель компании</div>
-                    <div class="about__item_image-text-name">Илья Пиотровский</div>
-                </div>
-            </div>
-        </div>
     </div>
 </template>
 

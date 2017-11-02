@@ -9,7 +9,7 @@
             <div class="contacts__item">
                 <div class="contacts__item_title">Главный офис</div>
                 <div class="contacts__item_desc">Наш офис находится по адресу: </div>
-                <div class="contacts__item_text">г. Москва, ул. Новодмитровская д.1, </br>стр. 1. на территории "Хлебзавод №9"</div>
+                <div class="contacts__item_text">г. Москва, ул. Новодмитровская д.1, </br>стр. 26. на территории "Хлебзавод №9"</div>
                 <div class="contacts__item_desc">Телефон:</div>
                 <a href="tel:+74954097400" class="contacts__item_text">+7 (495) 409 74 00</a>
                 <a href="mailto:office@blackout.moscow" class="contacts__item_email">office@blackout.moscow</a>
@@ -59,7 +59,7 @@
       },
       readyMap(){
         var myMap = new ymaps.Map('map1', {
-            center: [55.806535, 37.584833],
+            center: [55.806843, 37.584981],
             zoom: 16,
             controls: []
           }, {
@@ -71,9 +71,9 @@
             '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
           ),
 
-          myPlacemarkWithContent = new ymaps.Placemark([55.806535, 37.584833], {
-            hintContent: 'г. Минск, улица Богдановича, дом 60',
-            balloonContent: 'г. Минск, улица Богдановича, дом 60',
+          myPlacemarkWithContent = new ymaps.Placemark([55.806843, 37.584981], {
+            hintContent: 'г. Москва, ул. Новодмитровская д.1, ',
+            balloonContent: 'г. Москва, ул. Новодмитровская д.1, ',
           }, {
             // Опции.
             // Необходимо указать данный тип макета.

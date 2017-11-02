@@ -68,7 +68,7 @@ const router = new VueRouter({
     { path: '/project', name: 'project' , component: project},
     { path: '/project/:id', name: 'projectCategory' , component: projectCategory},
     { path: '/project/:id/:item', name: 'projectItem' , component: projectItem},
-    // { path: '/partners', name: 'partners' , component: partners},
+    { path: '/partners', name: 'partners' , component: partners},
     { path: '/about', name: 'about' , component: about},
     { path: '/contacts', name: 'contacts' , component: contacts},
   ]
