@@ -1,15 +1,14 @@
 from config.settings import *
 DEBUG = False
-ALLOWED_HOSTS = ['www.testblackout.pythonanywhere.com', 'testblackout.pythonanywhere.com']
+ALLOWED_HOSTS = ['*']
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'blackout',
-        'PASSWORD': 'user1111',
-        'HOST': 'testblackout-551.postgres.pythonanywhere-services.com',
-        'USER': 'super',
-        'PORT': '10551'
+        'PASSWORD': '1111',
+        'HOST': 'localhost',
+        'USER': 'postgres',
     }
 }
 
@@ -17,7 +16,8 @@ ADMINS = [
     ('Blackout', 'zubkov@smoothie.digital')
 ]
 
-SITE_HOST = 'testblackout.pythonanywhere.com'
+# SITE_HOST = 'testblackout.pythonanywhere.com'
+SITE_HOST = '188.225.11.16'
 
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.yandex.ru'
